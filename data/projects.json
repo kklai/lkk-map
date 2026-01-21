@@ -8,6 +8,13 @@
     },
     {
         "index": "PROJECT 002",
+        "name": "DETAILED WALL MAP",
+        "name_cn": "大型海報",
+        "status": "Coming soon.",
+        "id": "wallmap"
+    },
+    {
+        "index": "PROJECT 003",
         "name": "RAISED RELIEF POSTCARD",
         "name_cn": "凹凸地圖",
         "status": "Coming soon.",
