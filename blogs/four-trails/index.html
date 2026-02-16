@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SUNFUYEAH 100</title>
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<link rel="shortcut icon" href="https://www.lkk-map.com/img/lkk-logo-06.webp" />
+<link rel="apple-touch-icon" sizes="128x128" href="https://www.lkk-map.com/app-icon.png">
+<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">
+
+<!-- For Google -->
+<meta name="description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="keywords" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="author" content="LKK" />
+<meta name="copyright" content="LKK" />
+<meta name="application-name" content="LKK" />
+
+<!-- For Facebook -->
+<meta property="og:title" content="SUNFUYEAH 100" />
+<meta property="og:image" content="https://www.lkk-map.com/img/social/sunfuyeah100-fb.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://www.lkk-map.com/blogs/sunfuyeah100/" />
+<meta property="og:description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+
+<!-- For Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SUNFUYEAH 100" />
+<meta name="twitter:description" content="MacLehose Trail 100km | 麥理浩徑 100公里" />
+<meta name="twitter:image" content="https://www.lkk-map.com/img/social/sunfuyeah100-twitter.jpg" />
+<meta property="og:image:width" content="800" />
+<meta property="og:image:height" content="420" />
+<style>
+@font-face {
+  font-family: 'Hong Kong Map Type';
+  /*a name to be used later*/
+  src: url('https://www.lkk-map.com/Hong-Kong-Map-Type.otf');
+}
+@font-face {
+  font-family: 'MYuenHK';
+  /*a name to be used later*/
+  src: url('https://www.lkk-map.com/MYuenHK-Medium.ttf');
+  /*URL to font*/
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #ececec;
+  font-family: Arial, sans-serif;
+  line-height: 1.3;
+}
+.g-header {
+  text-align: center;
+  font-family: 'Hong Kong Map Type';
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  font-size: 11px;
+  background: #000;
+  border-bottom: 1px solid #333;
+}
+.g-header a,
+.g-header a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+.g-header-inner {
+  padding: 10px 0 10px 0;
+}
+.text {
+  padding: 0 20px;
+  max-width: 460px;
+  margin: 0 auto 10px auto;
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+}
+.text-leadin {
+  text-align: center;
+}
+.g-switch {
+  text-align: center;
+  margin: 0 auto 10px;
+  font-size: 11px;
+  cursor: pointer;
+  position: relative;
+  z-index: 999999;
+}
+.g-switch .g-cn {
+  letter-spacing: 1px;
+}
+.g-switch .g-en {
+  letter-spacing: 0.3px;
+}
+.g-switch .g-divider {
+  margin: 0 10px;
+  display: inline-block;
+}
+.g-switch .g-read {
+  display: inline-block;
+  cursor: pointer;
+  padding: 5px;
+  opacity: 0.6;
+}
+.g-switch .g-read:hover {
+  opacity: 1;
+}
+.hed {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -1.3px;
+  font-weight: 700;
+  padding: 70px 10px 7px 10px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  font-family: "Hong Kong Map Type", Arial, sans-serif;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 600px) {
+  .hed {
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -1.5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 70px;
+  }
+}
+.hed .cn {
+  letter-spacing: 20px;
+  font-size: 28px;
+}
+@media screen and (min-width: 600px) {
+  .hed .cn {
+    font-size: 30px;
+  }
+}
+.map {
+  margin: 30px auto;
+  position: relative;
+  z-index: 0;
+}
+@media screen and (min-width: 460px) {
+  .map-inner {
+    margin-bottom: 100vh;
+  }
+}
+.map-meta {
+  text-align: center;
+  margin: 30px auto;
+}
+.map-meta .map-title {
+  width: 150px;
+  margin: 0 auto;
+}
+.g-body,
+.text {
+  position: relative;
+}
+.g-asset-container {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+.orbit .g-asset-container {
+  height: 100vh !important;
+}
+.orbit .g-3d-labels-cont,
+.orbit .g-asset-scroll-annotations {
+  display: none;
+}
+.g-asset-scroll-annotations {
+  overflow: hidden;
+  z-index: 99;
+  position: absolute;
+  top: 0;
+}
+.g-asset-scroll-annotations .g-text-cont {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 15px;
+  padding-top: 90vh;
+}
+.g-asset-scroll-annotations .g-text-cont:last-child {
+  padding-bottom: 90vh;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner {
+  background-color: #000;
+  padding: 20px 0;
+  max-width: 600px;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner {
+    padding: 20px;
+    max-width: 375px;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner.has-subhed {
+  background-color: transparent;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed {
+  margin: 10px auto 10px auto;
+  text-align: center;
+  text-shadow: 0 0 3px #000, 0 0 5px #000, 0 0 10px #000;
+  color: #fff;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .kicker {
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline;
+  padding: 0 3px 3px 6px;
+  font-family: "Hong Kong Map Type", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .kicker .cn {
+  font-size: 14px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed {
+  font-weight: 700;
+  margin: 10px 0 15px;
+  font-size: 17px;
+  position: relative;
+  font-family: "Hong Kong Map Type", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed .cn {
+  font-size: 22px;
+  letter-spacing: 5px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed2 {
+  font-family: "Hong Kong Map Type", Arial, sans-serif;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .kicker .g-show,
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed .g-show,
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-subhed .subhed2 .g-show {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #000;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text {
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-size: 17px;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text {
+    padding: 0;
+    font-size: 15px;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text:last-child {
+  margin-bottom: 0;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.caption {
+  text-align: center;
+  font-style: italic;
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.caption:last-child {
+  margin-bottom: 0;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .inner-text.note {
+  margin-top: 50px;
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 13px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img {
+  width: 100%;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-desktop {
+  aspect-ratio: 4 / 2.9;
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-desktop {
+    display: block;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-mobile {
+  aspect-ratio: 2 / 3;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .img.img-mobile {
+    max-width: 375px;
+  }
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .vid {
+  width: 100%;
+  background-repeat: none;
+  background-size: 100%;
+  background-position: center;
+  margin-top: 25px;
+  margin-bottom: 5px;
+}
+.g-asset-scroll-annotations .g-text-cont .g-text-inner .vid video {
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+@media screen and (min-width: 600px) {
+  .g-asset-scroll-annotations .g-text-cont .g-text-inner .vid video {
+    max-width: 300px;
+  }
+}
+.g-asset-container canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.g-asset-debug-container {
+  position: -webkit-fixed;
+  position: fixed;
+  margin-top: -100vh;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.65);
+  color: #000;
+  margin-left: 2px;
+  padding: 10px;
+  display: none;
+  transform: translateZ(0);
+  z-index: 203;
+}
+.g-asset-debug-pct {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 14px;
+  width: 100%;
+  color: #000;
+  background-color: rgba(252, 0, 255, 0.6);
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: -7px;
+  z-index: 204;
+  clip-path: polygon(/* calc(100% - 110px) 7px, */ calc(100% - 48px) 7px, calc(100% - 38px) 0, 100% 0, 100% 100%, calc(100% - 38px) 100%, calc(100% - 48px) 8px /* calc(100% - 110px) 8px */);
+}
+.g-asset-debug-pct-soft {
+  color: #fff;
+  background-color: rgba(50, 50, 50, 0.6);
+  opacity: 0.8;
+  z-index: 204;
+  clip-path: polygon(/* calc(100% - 110px) 7px, */ calc(100% - 48px) 7px, calc(100% - 38px) 0, 100% 0, 100% 100%, calc(100% - 38px) 100%, calc(100% - 48px) 8px /* calc(100% - 110px) 8px */);
+}
+.g-3d-labels-cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.g-3d-label {
+  transform: none;
+  position: absolute;
+  font-family: 'Hong Kong Map Type', arial, sans-serif;
+  text-shadow: none;
+  font-size: 7px;
+  line-height: 10px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #666;
+  text-shadow: 0 0 3px #000, 0 0 6px #000, 0 0 6px #000, 0 0 6px #000;
+  text-transform: uppercase;
+  transition: opacity 1s, color 1s;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  white-space: nowrap;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+}
+.g-3d-label .cn {
+  font-size: 12px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label .cn {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 3px;
+  }
+}
+.g-3d-label span {
+  display: block;
+  white-space: nowrap;
+}
+.g-3d-label.active {
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 0 0 3px #000, 0 0 6px #000;
+}
+.g-3d-label.active .g-show {
+  display: inline-block;
+}
+.g-3d-label .g-inner {
+  width: auto;
+}
+.g-3d-label.left {
+  text-align: left;
+}
+.g-3d-label.right .g-inner {
+  text-align: right;
+  transform: translate(-100%, 0);
+}
+.g-3d-label.center .g-inner {
+  transform: translate(-50%, 0);
+  text-align: center;
+}
+.g-3d-label.alignbottom .g-inner {
+  transform: translateY(-100%);
+}
+.g-3d-label.center.alignbottom .g-inner {
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
+.g-3d-label.right.alignbottom .g-inner {
+  transform: translate(-100%, -100%);
+  text-align: right;
+}
+.g-3d-label.right.alignbottom .g-inner {
+  transform: translate(-100%, -100%);
+}
+.g-3d-label.mtsymbol {
+  text-shadow: 0 0 3px #000, 0 0 6px #000, 0 0 10px #000;
+}
+.g-3d-label.mtsymbol .g-version:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 6px solid #fff;
+  filter: drop-shadow(0 0 3px #000);
+  z-index: 2;
+}
+.g-3d-label.mtsymbol .g-version:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid #000;
+  filter: drop-shadow(0 0 3px #000);
+  z-index: 1;
+}
+.g-3d-label.hasnumber span:last-child {
+  font-size: 8px;
+  letter-spacing: 1px;
+  color: #989898;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.hasnumber span:last-child {
+    font-size: 9px;
+  }
+}
+.g-3d-label.desktop {
+  display: none;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.desktop {
+    display: block;
+  }
+}
+.g-3d-label.lantau-island .cn {
+  letter-spacing: 8px;
+}
+.g-3d-label.big .cn {
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 3px;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big .cn {
+    font-size: 16px;
+    letter-spacing: 5px;
+  }
+}
+.g-3d-label.big .en {
+  font-size: 9px;
+  line-height: 1.3;
+}
+@media screen and (min-width: 600px) {
+  .g-3d-label.big .en {
+    font-size: 12px;
+  }
+}
+span.en {
+  display: none;
+}
+span.en.g-show {
+  display: block;
+}
+span.cn {
+  display: none;
+  line-height: 1.5;
+}
+span.cn.g-show {
+  display: block;
+}
+.g-version {
+  display: none;
+}
+.g-version.g-show {
+  display: block;
+}
+.cn {
+  font-family: 'MYuenHK';
+}
+</style>
+</head>
+<body>
+<div class="g-header"><a href="https://www.lkk-map.com">
+    <div class="g-header-inner">LKK MAP</div>
+</a></div>
+
+<div class="g-body">
+    <div class="hed">
+        <span class="g-version en g-show">Hiking the Hong Kong Four Trails</span>
+        <span class="g-version cn">香港四徑全走</span>
+    </div>
+    
+    <div class="g-switch">
+        <div class="g-read g-cn">用中文閱讀</div><div class="g-divider">|</div><div class="g-read g-en">Read in English</div>
+    </div>
+
+
+    
+        
+    
+        
+    
+        
+            <div class="text text-leadin">
+                <span class="g-version en g-show">In the summer of 2022, I hiked the four long distance trails in Hong Kong. This journey was one of the most memorable things I’ve done in my life. It was my expression of love for trails and for my city.</span>
+                <span class="g-version cn">在 2022 年夏天，我完成了香港四徑。這趟旅程是我對香港和對山徑的愛意，是我人生其中做過一件最深刻的事。</span>
+            </div>
+        
+    
+        
+    
+        
+     
+</div>
+
+
+
+
+<div class="map">
+    <div class="map-inner">
+        <div class="g-asset-container"></div>
+        <div class="g-3d-labels-cont"></div>
+        <div class="g-asset-scroll-annotations">
+            
+                
+            
+                
+                <div class="g-text-cont g-text-cont-1" data-id="intro" data-index="1">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">There’s something so special to me about the idea of a trail. Going from A to B, taking one step at a time, following in the footsteps of many and sharing their experience, conquering a peak, logging a distance, every part of it deeply satisfies me. And to do this in the very hometown I love, nothing compares to it.</span>
+                                        
+                                        <span class="g-version cn">「山徑」這東西對我有一種特別的吸引力。從 A 點走到 B 點，一步一步向前，分享著前人的經歷，征服一座山，完成一個既定距離，每一部分也讓我感到十分滿足。在我最愛的香港完成這件我最愛的事，實在沒什麼能及。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-2" data-id="section-1" data-index="2">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">June</span>
+                                        <span class="g-version cn">六月</span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show">The Hong Kong Trail</span>
+                                        <span class="g-version cn">港島徑</span>
+                                    </div>
+                                    <div class="subhed2">
+                                        <span class="g-show">50 KM</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-3" data-id="section-1-text" data-index="3">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I started with the shortest of the four trails, the Hong Kong Trail. This 50-kilometer trail traverses Hong Kong Island from Victoria Peak to Big Wave Bay. When I set off, I had no idea whether I could finish all of these trails. This would be the first time I hiked 50 kilometers in one day.</span>
+                                        
+                                        <span class="g-version cn">我先挑戰了最短的港島徑。50 公里，山頂為起點，橫誇整個港島至大浪灣。出發前我也不知道我可不可以完成這個企劃，這是我第一次一天內走 50 公里。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I remember the magical feeling as I took my first step on the trails along Lugard Road. The soft light of the morning made the view from Victoria Peak even more magnificent.</span>
+                                        
+                                        <span class="g-version cn">清晨七時的微光讓山頂的景色比平常更美妙。在盧吉道找到港島徑的指示牌，我踏出了整個四徑旅程的第一步。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/hk-peak.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The view from the peak. </span>
+                                        <span class="g-version cn"> 山頂的景觀。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The harbor came in and out of view along the way, distant islands in the background. At the top of Sai Wan San, Lamma Island was just across the way.</span>
+                                        
+                                        <span class="g-version cn">沿途望著維港的海彎，遠處的島嶼，一步一步地走。登上西灣山，藍天映照著對岸的南丫島。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I hiked along the ridge above Aberdeen, where Hong Kong found its beginning as a fishing village. A historic place called “Jumbo Floating Restaurant” had just announced its closure. I yelled “Goodbye!” to the iconic restaurant, and to everything that was dying in the city as well.</span>
+                                        
+                                        <span class="g-version cn">沿著香港仔對上的山丘走，想著香港小漁港的起源。那時珍寶海鮮坊剛宣報了結業，我向著那邊大叫了一句再見，也是對整個城市正在死去的東西說的。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/hk-aberdeen.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Aberdeen. </span>
+                                        <span class="g-version cn"> 香港仔</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The trail criss-crosses with civilization, making resupplies easy on these long hikes. After being in the woods for half the morning, I emerged at a gas station at the halfway point of the trail. I feasted on gatorade and a microwave dinner before setting off again.</span>
+                                        
+                                        <span class="g-version cn">港島徑在市區穿插著，一時在密林中，一時走在馬路上，走四徑也不用太擔心糧水的問題。中午的時候在油站吃了一個叮叮飯，飲了一枝冰凍的寶礦力，又再次出發。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">In the afternoon, I conquered Mount Butler and Mount Parker, walked along the edge of the stunning Tai Tam Reservoir.</span>
+                                        
+                                        <span class="g-version cn">下午，我征服了畢拿山及渣甸山，然後沿著大潭水塘走，水塘真的很壯觀很美。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/hk-taitam.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Tai Tam Reservoir. </span>
+                                        <span class="g-version cn"> 大潭水溏。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I dragged my tired body up Dragon’s Back, feeling dehydrated under the brutal sun. (I would not recommend doing four trails in the summer!) A gazebo magically appeared before me when I felt like I couldn’t possibly go on. I would learn to love gazebos throughout this journey.</span>
+                                        
+                                        <span class="g-version cn">之後還有龍脊及打爛埕頂山（好喜愛這奇怪的山名）。六月的炎夏，我走到下午三、四時，感覺差點要熱死了（不建議任何人在夏天挑戰四徑）。但人真的很奇妙的，休息一回又可以重新出發。那時還有一個新體會「涼亭真的很涼啊！」</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/hk-shekopeak.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Final peak of the day… Shek O Peak!</span>
+                                        <span class="g-version cn"></span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">After 12 hours of walking, I finally arrived at Big Wave Bay and took an unceremonious picture of the H100 sign.</span>
+                                        
+                                        <span class="g-version cn">十二小時後，我終於到了大浪灣，跟 H100 的牌子拍了張照片。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I procured a beer at the store and found a rock to sit on among tourists. It felt so strange that those around me had no idea what I had been through that day. I raised my beer at the sun as it slowly set.</span>
+                                        
+                                        <span class="g-version cn">跟士多的婆婆買了枝啤酒，在沙灘的遊客堆中找個石頭坐下來，靜靜地看著日落，為第一條徑畫上完美的句號。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/hk-end.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Celebratory beer at Big Wave Bay.</span>
+                                        <span class="g-version cn"></span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-4" data-id="section-2" data-index="4">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">July</span>
+                                        <span class="g-version cn">七月</span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show">The Wilson Trail</span>
+                                        <span class="g-version cn">衛奕信徑</span>
+                                    </div>
+                                    <div class="subhed2">
+                                        <span class="g-show">78 KM</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-5" data-id="section-2-text" data-index="5">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Wilson Trail was the most challenging of the four trails for me. The 78-km trail cuts across the city from south to north, featuring a fun little train ride to cross the harbor. The trail’s elevation is unrelenting, it didn’t help that I picked some of the hottest days of the year, I almost gave up halfway through.</span>
+                                        
+                                        <span class="g-version cn">衛奕信徑是四徑裡對我最難的。78 公里的路途，由港島南面的赤柱出發，一直向北走至新界南涌（中間要乘地鐵過海！）炎炎的夏天，瘋狂的上落，我中途差點放棄了。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The trail starts in Stanley, the southern edge of Hong Kong Island, and throws you in the thick of it immediately with two hard climbs, The Twins and Violet Hill. Part of the trail overlaps with the Hong Kong Trail. But this time feels a lot different, probably because of the heavy pack loaded with camping gear.</span>
+                                        
+                                        <span class="g-version cn">那天清晨到了香港島南面的赤柱，一起步便是不斷的攀升，孖崗山，紫蘿蘭山。這裡有一小段跟港島徑重疊，但感覺好不一樣，這次背上裝著露營裝備的背包，好像沉重多了。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-violet-hill.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Violet Hill. </span>
+                                        <span class="g-version cn"> 紫羅蘭山。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I was exhausted by the time I completed the Hong Kong Island stretch. I stepped on the subway with my large backpack, covered in dirt and sweat. I was worried that people might stare, but no one batted an eye at me.</span>
+                                        
+                                        <span class="g-version cn">好不容易完成港島的部份，大大的背包，滿身汗水泥濘走上地鐵。本來以為這樣的裝扮會唔會惹來途人的張望，但香港人見怪不怪。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-mtr.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Taking the MTR. </span>
+                                        <span class="g-version cn"> 搭地鐵。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Wilson Trail was much harder than I expected, and I was going really slow. It took me more than four hours to finish 10 kilometers. My goal was to complete 40 kilometers that day. It was going to be a long night.</span>
+                                        
+                                        <span class="g-version cn">衛奕信徑艱辛的路程讓我在時間上失了預算。10 公里用了四個多小時才完成，我那天的目標是要完成 40 公里。那時不敢想像晚上要幾多點才能完成。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">After lunch, I worked my way up Devil’s Peak and Black Hill at the speed of a snail. It was an extremely hot day. I felt like I was dying. When I finally reached the top of Black Hill, I was surprised to see a man painting. That moment stayed with me. If he could endure climbing a mountain in this heat for the love of painting, I can too for my love of hiking.</span>
+                                        
+                                        <span class="g-version cn">午飯後，我以螞蟻爬行的速度走上魔鬼山。那天天氣真的熱得很不饒人，我感覺自己快要虛脫死掉似的。但走到山頂上，發現有位阿叔在畫油畫。這個景象讓我非常深刻。在這麼炎熱的夏天，走到山上，只為了畫一幅畫。他讓我覺得我也可以做到。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-painting.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">A man painting on Black Hill. </span>
+                                        <span class="g-version cn"> 在五桂山上遇到一名畫畫的叔叔。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I don’t know if it was the heat, the backpack, or something else, but it just wasn’t my day. I moved extremely slowly, with lots of breaks in between. By 10 p.m. I still had more than 10 kilometers to go. I reached a point on the trail that intersected with a busy road. Cabs flew by constantly, tempting me to go home. I sat down and seriously contemplated giving up	.</span>
+                                        
+                                        <span class="g-version cn">不知道是否因為太熱，或是因為背囊太重，或是什麼，但我的狀態真的很差。我走得很慢很慢，不時還要坐下來休息。到了晚上 10 時，但我還未完成目標距離。我坐在大埔公路的路邊，面前巴士的士不斷飛過，我坐在路邊認真考慮要不要回家。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-taxi.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Sitting on the side of the road, thinking about going home. </span>
+                                        <span class="g-version cn"> 坐在大埔道的路邊，想著要不要回家。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I called a friend and told her what was going on. She refused to let me give up and even offered to take the next day off work to hike the rest of the trail with me. I couldn’t believe someone would do this for me.</span>
+                                        
+                                        <span class="g-version cn">我打給一個朋友，她給我的鼓勵及支持把我從谷底中拉出來。她還說不如我明天來找陪你完成後半段好嗎？我不敢相信有人會為我這麼做。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">It was 1 a.m., by the time I collapsed in camp that night. I made it to the halfway mark of the Wilson Trail.</span>
+                                        
+                                        <span class="g-version cn">那晚，我堅持走到城門水塘，即衞奕信徑的一半。紮營睡覺時，已經凌晨一時了。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I woke up at the crack of dawn to keep hiking, I knew I needed all the time I could get. I was surprised to find grandpas already doing tai chi at the reservoir at 5 a.m. (What time did they get up???)</span>
+                                        
+                                        <span class="g-version cn">第二天，我為了爭取時間清晨 5 時便起步。我驚覺已有阿伯在城門水塘晨運了。（他們到底幾點起床???）</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Four hours and several mountains later, I finally got to the meeting point with my friend. She took the first photo of me on the trail. How truly happy I was to see her!</span>
+                                        
+                                        <span class="g-version cn">用了 4 個小時及多個山頭後，我到了太和跟我的朋友會合。她拍下我四徑上的第一張相！</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-me.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">After a brutal day and a half, I was so happy to see her! </span>
+                                        <span class="g-version cn"> 痛苦的一天後看到她，我真的很高興！</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The rest of the trail only continued to get harder, but the company of my friend made a world of difference. Together we tackled the endless staircase of Cloudy Hill, and the infamous eight peaks of Pat Sin Leng.</span>
+                                        
+                                        <span class="g-version cn">餘下的路比昨日還更具挑戰性，但朋友的陪伴原來這麼有用。我們一起打倒了九龍坑山的無限樓梯，還有無窮上落的八仙嶺。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">When we made it to the end of Wilson Trail, I couldn’t believe it. The landscape at Nam Chung against the soft light of dusk made for a perfect ending.</span>
+                                        
+                                        <span class="g-version cn">最後，我們趕及在日落尾升完成這條讓我飽受折磨的衛奕信徑。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/wilson-end.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">At the end of the trail near dusk. </span>
+                                        <span class="g-version cn"> 在黃昏時完成。</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-6" data-id="section-3" data-index="6">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">August</span>
+                                        <span class="g-version cn">八月</span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show">The Lantau Trail</span>
+                                        <span class="g-version cn">鳳凰徑</span>
+                                    </div>
+                                    <div class="subhed2">
+                                        <span class="g-show">70 KM</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-7" data-id="section-3-text" data-index="7">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The 70-km Lantau Trail was next. Having tackled the last two trails, I felt much more prepared mentally and physically, and this time I was doing it with a friend. But life always has some curveballs to throw at you.</span>
+                                        
+                                        <span class="g-version cn">下一條挑戰的是 70 公里的鳳凰徑。經過兩條徑的訓練，我自覺心理和生理都比較有準備。這次還有朋友跟我一起走。但四徑就是一個充滿未知的旅程 ⋯⋯</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The trail starts at the ferry terminal at Mui Wo, and snakes upwards to Sunset Peak and Lantau Peak. The day started beautifully. But the higher up we got, the windier and foggier it was. The wind was so strong I could barely stand. Every step to the top of Lantau Peak was a battle.</span>
+                                        
+                                        <span class="g-version cn">我們由梅窩渡輪碼頭起步，慢慢向大東山及鳳凰山出發。風和日麗的早上，很快便及大霧及烏雲覆蓋。在鳳凰山上，大風到差點站也站不起來。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="vid">
+                                        <video muted autoplay loop playsinline src="img/lantau-wind.mp4" poster="img/lantau-wind.jpg"></video>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Faced with crazy winds on Lantau Peak. </span>
+                                        <span class="g-version cn"> 在鳳凰山上迎來大風大霧。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">As we descended Lantau Peak, we were hit with pouring rain. We were soaking wet when we reached the nearby town and sat down for lunch. The weather forecast showed that the rain wasn’t going to stop for a while so we made the heartbreaking call to head home. We decided to take the fancy way down via cable car as a consolation. But as soon as we got on, it was blue skies all the way!</span>
+                                        
+                                        <span class="g-version cn">我們到達昂坪的時候，傾盤大雨，讓我們全身濕透。吃午餐時，我們研究著天文台的氣像圖，雨勢好像沒有要停下來的跡象。最後我們忍痛決定回家。既然來到這邊，便坐一下大家也沒坐過的纜車，但坐上纜車後天氣突然轉好！</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/lantau-sun.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The moment we got on the cable car, the weather turned! </span>
+                                        <span class="g-version cn"> 一上纜車就藍天白雲。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">As dumb as it was, we decided to turn right back around and return to the trail. We had a mission to finish!</span>
+                                        
+                                        <span class="g-version cn">我們戇居居地轉身便坐上上山的纜車，我們要完成任務啊！</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The weather stayed pleasant all the way till we saw the most perfect sunset at the westernmost edge of the city. It rained on and off as we descended into the town of Tai O in the dark, where we found a gazebo to camp out and stay dry.</span>
+                                        
+                                        <span class="g-version cn">一直到日落的時間天氣也不錯，幸好我們沒有放棄，還在山上欣賞到香港最西的日落。入黑後斷斷續續地下著雨，我們最後在大澳找到一個涼亭裡露宿避雨。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/lantau-sunrise.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The perfect sunrise at Tai O. </span>
+                                        <span class="g-version cn"> 在大澳看到完美的日出。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The sunrise the next morning off the coast of Tai O was one of the most gorgeous things I’ve seen. We had a little breakfast in the town and set off again. We walked along the western coastline of the island in the most rural part of the whole trail. Because it was so remote, the trail was full of stray dogs, spider webs, and countless bugs. We were so grateful when we emerged to civilization at the next village where a little store awaited us with cold drinks and fresh fruits.</span>
+                                        
+                                        <span class="g-version cn">第二天早上在大澳海岸上看到的日出，是我人生看過數一數二的。在茶記吃過早餐，就沿著海岸線再出發。這段應該是整個旅程最荒蕪的一段，我們與野狗，無窮無盡的蜘蛛網和蚊蟲搏鬥著。到達分流的陳記士多時，迎來冰凍的可樂和新鮮的水果，實在極為感動。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/lantau-store.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">One of my most thankful pitstops. </span>
+                                        <span class="g-version cn"> 其中一個最感動的補給點 — 分流的陳記士多。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">We walked and we walked, and we walked some more. It was nightful when we completed the loop and arrived back at the infamous postbox that marks the start and end of the trail.</span>
+                                        
+                                        <span class="g-version cn">我們不斷走不斷走，到晚上終於回到梅窩起點，跟那馳名的郵筒合照。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/lantau-end.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Victory photo with the famous mailbox! </span>
+                                        <span class="g-version cn"> 在終點與那駛名的郵筒合照！</span>
+                                    </div>
+                                
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-8" data-id="section-4" data-index="8">
+                        <div class="g-text-inner has-subhed">
+                            
+                                <div class="inner-subhed">
+                                    <div class="kicker">
+                                        <span class="g-version en g-show">September</span>
+                                        <span class="g-version cn">九月</span>
+                                    </div>
+                                    <div class="subhed">
+                                        <span class="g-version en g-show">The MacLehose Trail</span>
+                                        <span class="g-version cn">麥理浩徑</span>
+                                    </div>
+                                    <div class="subhed2">
+                                        <span class="g-show">100 KM</span>
+                                    </div>
+                                </div>
+                            
+                            
+                        </div>
+                </div>
+                
+            
+                
+                <div class="g-text-cont g-text-cont-9" data-id="section-4-text" data-index="9">
+                        <div class="g-text-inner ">
+                            
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The 100-km MacLehose Trail was the perfect ending to my four trails journey. The trail starts from the eastern end of the city in Sai Kung and traverses all the way to the west in Tuen Mun. The trail hits the most iconic peaks in the city, including the highest peak, Tai Mo Shan.</span>
+                                        
+                                        <span class="g-version cn">這趟麥理浩徑 100 公里的旅程，對我是一個完美的總結。它是四條徑最長的一條，由西貢至屯門，途經全港最高的大帽山。前幾條徑的辛酸，加上即將移民的情緒，這次讓我萬般滋味在心頭。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">For the fourth and last time, I started bright and early at the start of a trail. I walked along the edge of the beautiful High Land Reservoir, where I reached the Eastern edge of the city.</span>
+                                        
+                                        <span class="g-version cn">我大清早來到麥理浩徑。一直走到萬宜水庫，即香港的最東面。這是香港第一個看到日出的地方。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/mac-start.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">My last starting point photo. </span>
+                                        <span class="g-version cn"> 最後一次在起點拍照。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The views were incredible all the way to Ham Tin Wan, where a lovely village store awaited me. They even let me sign their wall!</span>
+                                        
+                                        <span class="g-version cn">一直走到鹹田彎的風景也令人嘆為觀止。在那裡吃了一個雙蛋麵，然後在士多外的玻璃樽牆留低了筆跡。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/mac-views.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">The views in Sai Kung. </span>
+                                        <span class="g-version cn"> 西貢的景色。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">The first day was relatively relaxed and I had finished hiking before sunset. It was a rare experience for me to lay down in my tent and watch the wilderness get dark. My brother brought me dinner late that night.</span>
+                                        
+                                        <span class="g-version cn">第一天還相對輕鬆，日落前已經完成了要走的路。靜靜地躺在帳篷裡，看著天色慢慢昏暗，感覺真的很舒服。晚上的時候，感謝哥哥為我帶來了豐富的晚餐。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I tackled mountain after mountain the next morning, revisiting parts of the Wilson Trail that I dragged myself through. I felt like a completely different person than I did a few months ago. I stopped and enjoyed a tofu dessert at the same store where I had almost given up the Wilson Trail.</span>
+                                        
+                                        <span class="g-version cn">第二天早上，打倒了一個又一個的山頭，也經過了在衛奕信徑時把我深深擊敗過的路段。雖然只是隔了幾個月，但是我已經好像重生了一樣。在恆益士多慢慢坐著，吃了一個豆腐花。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="img img-mobile" style="background-image: url('img/mac-tofu.jpg');"></div>
+                                
+                            
+                                
+                                    <div class="inner-text caption">
+                                        <span class="g-version en g-show">Tofu dessert at the snack shop. </span>
+                                        <span class="g-version cn"> 恆益士多的豆腐花。</span>
+                                    </div>
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">On Lion Rock, I passed by a little shed that had some Chinese sayings hanging on the wall. Part of it said “It’s a blessing to have walked here.”</span>
+                                        
+                                        <span class="g-version cn">在獅子山上經過風月亭時留意到一句句子： 「步行到此乃閣下之福也」。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">Two friends joined me later near Golden Hill, which was overrun with monkeys. We tackled Needle Hill and Grass Hill, and enjoyed the beautiful night view of the city.</span>
+                                        
+                                        <span class="g-version cn">在被馬騮佔據的金山兩位朋友會合跟我走一段。辛苦經過了針山和草山，享受著日落美景。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">I felt like I had all the energy in the world and decided to get up early the next morning to catch the sunrise. I broke camp in the dark and hustled onto Sze Fong Shan. I found a rock to sit on, and watched as the sun slowly came up the horizon, with all the mountains I’ve hiked in Hong Kong as the backdrop. I have thought about this moment a lot since then. This is where my mind would go when I needed a happy place.</span>
+                                        
+                                        <span class="g-version cn">還自覺有很精神，所以決定最後一天，再特地早起來看日出。找一個好石頭坐下來，看著大陽慢慢的在遠方升起來，映照著我幾個月來走過的山脈。即使在幾年後，當我需要一個開心的回憶時，我常常都會回到這一刻。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">At the top of Tai Mo Shan, the highest peak of Hong Kong, I took a victory lap too early. The ups and downs of Tai Tong and Thousand Islands kept beating me back before I finished the 100-km MacLehose Trail.</span>
+                                        
+                                        <span class="g-version cn">征服大帽山後，好像已經戰勝了最難的路途了。還以為一直下山，但大棠、千島湖的路途一樣難行，最後便走到麥理浩徑的終點。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                                
+                                    <div class="inner-text ">
+                                        <span class="g-version en g-show">On September 4, 2022, I completed all four trails. Thank you for everyone who supported me, those who walked with me, and most of all, my trusty old legs. I saw a lot of places and enjoyed many good views through these 298 kilometers, something to remember this place by.</span>
+                                        
+                                        <span class="g-version cn">2022 年 9 月 4 日，我完成了四徑。多謝身邊人的支持，陪行的人，還有我的雙腳。我在香港走了 298 公里的路，去了很多地方，見盡了美景，讓我把這個地方好好記住了。</span>
+                                        
+                                    </div>
+                                
+                            
+                                
+                            
+                        </div>
+                </div>
+                
+            
+        </div>
+    </div>
+</div>
+<script type='module'>
+
+import { mainScript } from './src/script-3d.js';
+
+import cameraPositions from './src/camera-positions.json' with { type: 'json' };
+
+import labels from './src/labels.json' with { type: 'json' };
+
+mainScript.init(null, null, cameraPositions, labels)
+</script>
+</body>
+</html>

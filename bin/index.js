@@ -69,7 +69,7 @@ function compile() {
 			out += '<link rel="shortcut icon" href="img/lkk-logo-06.webp" />\n';
 			out += '<link rel="apple-touch-icon" sizes="128x128" href="app-icon.png">\n'
 			out += '<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">\n';
-			out += '<!-- For Google -->\n<meta name="description" content="hiking and making trail maps" />\n<meta name="keywords" content="LKK MAP" />\n<meta name="author" content="LKK" />\n<meta name="copyright" content="LKK" />\n<meta name="application-name" content="LKK" />\n<!-- For Facebook -->\n<meta property="og:title" content="LKK MAP" />\n<meta property="og:image" content="https://www.lkk-store.com/lkk-map/facebook.jpg" />\n<meta property="og:url" content="https://www.lkk-store.com/lkk-map/" />\n<meta property="og:description" content="hiking and making trail maps" />\n<!-- For Twitter -->\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="LKK MAP" />\n<meta name="twitter:description" content="hiking and making trail maps" />\n<meta name="twitter:image" content="https://www.lkk-store.com/lkk-map/twitter.jpg" />'
+			out += '<!-- For Google -->\n<meta name="description" content="hiking and making trail maps" />\n<meta name="keywords" content="LKK MAP" />\n<meta name="author" content="LKK" />\n<meta name="copyright" content="LKK" />\n<meta name="application-name" content="LKK" />\n<!-- For Facebook -->\n<meta property="og:title" content="LKK MAP" />\n<meta property="og:image" content="https://www.lkk-map/facebook.jpg" />\n<meta property="og:url" content="https://www.lkk-map.com/" />\n<meta property="og:description" content="hiking and making trail maps" />\n<!-- For Twitter -->\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="LKK MAP" />\n<meta name="twitter:description" content="hiking and making trail maps" />\n<meta name="twitter:image" content="https://www.lkk-map.com/twitter.jpg" />'
 
 			var style = fs.readFileSync("build/style.css", "utf8");
 
@@ -80,7 +80,7 @@ function compile() {
 			out += '</head>\n';
 			out += '<body>\n';
 
-			out += '<div class="g-header"><a href="https://www.lkkmap.com/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-store.com/lkk-map/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>';
+			out += '<div class="g-header"><a href="https://www.lkk-map.com/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-map.com/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div>';
 
 			out += ejs_rendered;
 
