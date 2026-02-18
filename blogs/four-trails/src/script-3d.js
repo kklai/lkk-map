@@ -1,4 +1,4 @@
-let pagestate = "cn";
+let pagestate = "en";
 
 const addQueryParam = (key, value) => {
 	const url = new URL(window.location.href);
