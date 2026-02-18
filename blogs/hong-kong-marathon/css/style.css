@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Hong Kong Map Type'; /*a name to be used later*/
-    src: url('https://www.lkk-map.com/Hong-Kong-Map-Type.otf');
+    src: url('fonts/Hong-Kong-Map-Type.otf');
 }
 
 @font-face {
 	font-family: 'MYuenHK';
 	/*a name to be used later*/
-	src: url('https://www.lkk-map.com/MYuenHK-Medium.ttf');
+	src: url('fonts/MYuenHK-Medium.ttf');
 	/*URL to font*/
   }
 
