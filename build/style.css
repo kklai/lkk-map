@@ -34,12 +34,12 @@ a:visited {
   position: absolute;
   z-index: 9;
   top: 15px;
-  right: 15px;
+  left: 15px;
 }
 .g-header img {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 30px;
-  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 35px;
+  padding: 10px;
 }
 @media screen and (min-width: 600px) {
   .g-header img {
@@ -104,6 +104,22 @@ img {
 .intro .g-cn-cont {
   max-width: 354px;
   margin-top: 10px;
+}
+.menu-cont {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  z-index: 999;
+  text-align: right;
+  font-size: 13px;
+  line-height: 24px;
+  color: #ddd;
+}
+.menu-cont .plus {
+  font-size: 20px;
+}
+.menu-cont .menu-item {
+  cursor: pointer;
 }
 .nav {
   margin: 0 auto 50px auto;
@@ -183,16 +199,6 @@ img {
 }
 .project-list .project a {
   text-decoration: none;
-}
-.project-list .button,
-.button.active {
-  display: inline-block;
-  width: auto;
-  cursor: pointer;
-}
-.project.active .button,
-.button.active {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 .more {
   position: fixed;
@@ -275,4 +281,41 @@ video {
   font-size: 12px;
   line-height: 1.5;
   opacity: 0.5;
+}
+.lightbox {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  position: absolute;
+  display: none;
+}
+.lightbox .lightbox-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleY(70%);
+  transform-origin: top right;
+  font-size: 30px;
+  padding: 50px 30px;
+  cursor: pointer;
+}
+.lightbox .lightbox-items-cont {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.lightbox .nav-item {
+  padding: 20px 0;
+  cursor: pointer;
+}
+.lightbox a {
+  text-decoration: none;
+}
+.lightbox .date {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  padding-bottom: 10px;
 }

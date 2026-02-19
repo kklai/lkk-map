@@ -59,12 +59,12 @@ a:visited {
   position: absolute;
   z-index: 9;
   top: 15px;
-  right: 15px;
+  left: 15px;
 }
 .g-header img {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  width: 30px;
-  padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 35px;
+  padding: 10px;
 }
 @media screen and (min-width: 600px) {
   .g-header img {
@@ -129,6 +129,22 @@ img {
 .intro .g-cn-cont {
   max-width: 354px;
   margin-top: 10px;
+}
+.menu-cont {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  z-index: 999;
+  text-align: right;
+  font-size: 13px;
+  line-height: 24px;
+  color: #ddd;
+}
+.menu-cont .plus {
+  font-size: 20px;
+}
+.menu-cont .menu-item {
+  cursor: pointer;
 }
 .nav {
   margin: 0 auto 50px auto;
@@ -208,16 +224,6 @@ img {
 }
 .project-list .project a {
   text-decoration: none;
-}
-.project-list .button,
-.button.active {
-  display: inline-block;
-  width: auto;
-  cursor: pointer;
-}
-.project.active .button,
-.button.active {
-  background-color: rgba(255, 255, 255, 0.2);
 }
 .more {
   position: fixed;
@@ -301,138 +307,164 @@ video {
   line-height: 1.5;
   opacity: 0.5;
 }
+.lightbox {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 99999;
+  position: absolute;
+  display: none;
+}
+.lightbox .lightbox-x {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: scaleY(70%);
+  transform-origin: top right;
+  font-size: 30px;
+  padding: 50px 30px;
+  cursor: pointer;
+}
+.lightbox .lightbox-items-cont {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.lightbox .nav-item {
+  padding: 20px 0;
+  cursor: pointer;
+}
+.lightbox a {
+  text-decoration: none;
+}
+.lightbox .date {
+  display: block;
+  color: #999;
+  font-size: 13px;
+  padding-bottom: 10px;
+}
 </style>
 </head>
 <body>
-<div class="g-header"><a href="https://www.lkk-map.com/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-map.com/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div><!-- <div class="intro">
-	<div class="g-text">
-		LKK IS A MAPMAKER FROM HONG KONG. SHE LIKES MAKING MAPS, FINDING NEW WAYS TO VISUALIZE GEOGRAPHY, AND TELLING STORIES.
-	</div>
+<div class="g-header"><a href="https://www.lkk-map.com/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-map.com/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div><div class="menu-cont">
+	<div class="menu-item projects"><span class="plus">+</span> PROJECTS</div>
+	<div class="menu-item blogs"><span class="plus">+</span> STORIES</div>
+</div>
 
-	<div class="g-text g-cn-cont">
-		<span>LKK</span> <span class="g-text-cn">是來自香港的地圖製作者。她喜歡以新方式將地理資訊視像化，也熱愛用地圖說故事。</span>
+<div class="lightbox projects">
+	<div class="lightbox-x">X</div>
+	<div class="lightbox-items-cont">
+	
+		
+			<div class="nav-item project active" data-id="cloth" id="cloth-nav">
+				<div class="button button-cloth">
+					<span class="date">001</span>
+					<span class="name">SILKSCREEN CLOTH MAP</span>
+				</div>
+			</div>
+		
+	
+		
+			<div class="nav-item project " data-id="wallmap" id="wallmap-nav">
+				<div class="button button-wallmap">
+					<span class="date">002</span>
+					<span class="name">DETAILED WALL MAP</span>
+				</div>
+			</div>
+		
+	
+		
+			<div class="nav-item project " data-id="postcard" id="postcard-nav">
+				<div class="button button-postcard">
+					<span class="date">003</span>
+					<span class="name">RAISED RELIEF POSTCARD</span>
+				</div>
+			</div>
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
 	</div>
-</div> -->
+</div>
 
-<div class="project-outer">
-<div class="project-list">
-	<div class="project-list-inner">
+
+
+<div class="lightbox blogs">
+	<div class="lightbox-x">X</div>
+	<div class="lightbox-items-cont">
 	
-		<div class="project active" data-id="cloth" id="cloth-nav">
-			<div class="button button-cloth" data-id="cloth">
-			<div class="index">
-				PROJECT 001
-			</div>
-			<div class="name">
-				SILKSCREEN CLOTH MAP
-			</div>
-			</div>
-		</div>
+		
 	
-		<div class="project " data-id="wallmap" id="wallmap-nav">
-			<div class="button button-wallmap" data-id="wallmap">
-			<div class="index">
-				PROJECT 002
-			</div>
-			<div class="name">
-				DETAILED WALL MAP
-			</div>
-			</div>
-		</div>
+		
 	
-		<div class="project " data-id="postcard" id="postcard-nav">
-			<div class="button button-postcard" data-id="postcard">
-			<div class="index">
-				PROJECT 003
-			</div>
-			<div class="name">
-				RAISED RELIEF POSTCARD
-			</div>
-			</div>
-		</div>
+		
 	
-		<div class="project " data-id="" id="">
-			<a href='blogs/four-trails'>
-			<div class="index">
-				BLOG 001
-			</div>
-			<div class="name">
-				FOUR TRAILS
-			</div>
-			</a>
-		</div>
-	
-		<div class="project " data-id="" id="">
-			<a href='blogs/hong-kong-marathon'>
-			<div class="index">
-				BLOG 002
-			</div>
-			<div class="name">
-				MARATHON
-			</div>
-			</a>
-		</div>
-	
-		<div class="project " data-id="" id="">
+		
+			<div class="nav-item">
 			<a href='blogs/sunfuyeah100'>
-			<div class="index">
-				BLOG 003
-			</div>
-			<div class="name">
-				SUNFUYEAH100
-			</div>
+				<span class="date">NOV. 2024</span>
+				<span class="name">SUNFUYEAH100</span>
 			</a>
-		</div>
+			</div>
+		
+	
+		
+			<div class="nav-item">
+			<a href='blogs/sunshine-coast-trail'>
+				<span class="date">JULY 2024</span>
+				<span class="name">SUNSHINE COAST TRAIL</span>
+			</a>
+			</div>
+		
+	
+		
+			<div class="nav-item">
+			<a href='blogs/hong-kong-marathon'>
+				<span class="date">JAN. 2024</span>
+				<span class="name">MARATHON</span>
+			</a>
+			</div>
+		
+	
+		
+			<div class="nav-item">
+			<a href='blogs/four-trails'>
+				<span class="date">SUMMER 2022</span>
+				<span class="name">FOUR TRAILS</span>
+			</a>
+			</div>
+		
+	
+		
+			<div class="nav-item">
+			<a href='blogs/via-alpina'>
+				<span class="date">SEPT. 2021</span>
+				<span class="name">VIA ALPINA</span>
+			</a>
+			</div>
+		
 	
 	</div>
 </div>
-</div>
+
 
 <div class="section active" id="maps">
 <div class="project-cont">
 	<div class="canvas">
-		<!-- <div class="icon"><img src="img/3dicon.png" alt=""></div> -->
 		<div class="inner" id="canvas">
 		</div>
 	</div>
-
-	<div class="more cloth-options more-cloth">
-		<div class="title">PICK A MAP</div>
-		<div class="button active" data-id="four-trails">FOUR TRAILS</div>
-		<div class="button" data-id="kowloon-peak">KOWLOON PEAK</div>
-		<div class="button" data-id="cheung-tsui">CHEUNG TSUI</div>
-		<!-- <div class="button" data-id="howe-sound">HOWE SOUND CREST TRAIL</div> -->
-	</div>
-
-
-	<!-- <div class="more postcard more-postcard">COMING SOON.</div>
-
-	<div class="more more-cloth cloth-scroll-down">
-		<span>MORE ABOUT THIS PROJECT</span> <img src="img/arrow.png" alt="">
-	</div> -->
 </div>
 </div>
-<!-- 
-<div class="more-cloth cloth-body">
-
-	<div class="body-section">
-		<div class="small-text">Map by @lkk</div>
-		<div class="small-text">Type design by @fibikung</div>
-		<div class="small-text">Production by @lkk @hakdim</div>
-		<div class="small-text">Silk screen by Colorful Screen Print</div>
-		<div class="small-text">18" by 18" black cloth</div>
-		<div class="small-text">14" by 14" print</div>
-		<div class="small-text">Hand made silk screen printing on 100% cotton cloth</div>
-		<div class="small-text">Made in hong kong</div>
-	</div>
-
-	<div class="body-section">
-		<div class="small-title">THE MAKING OF</div>
-		<video src="video/lkk-cloth-map.mp4" controls muted></video>
-	</div>
-
-
-</div> -->
 
 <script type="importmap">
 	{
@@ -442,7 +474,6 @@ video {
 		}
 	}
 </script>
-
 <script type="module" src="lib/script.js"></script>
 <script type="module" src="lib/cloth.js"></script>
 <script type="module" src="lib/wallmap.js"></script>

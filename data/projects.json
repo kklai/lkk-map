@@ -1,38 +1,56 @@
 [   
     {
-        "index": "PROJECT 001",
+        "type": "project",
+        "index": "001",
         "name": "SILKSCREEN CLOTH MAP",
         "name_cn": "黑布地圖",
         "status": "Sold out",
         "id": "cloth"
     },
     {
-        "index": "PROJECT 002",
+        "type": "project",
+        "index": "002",
         "name": "DETAILED WALL MAP",
         "name_cn": "大型海報",
         "status": "Coming soon.",
         "id": "wallmap"
     },
     {
-        "index": "PROJECT 003",
+        "type": "project",
+        "index": "003",
         "name": "RAISED RELIEF POSTCARD",
         "name_cn": "凹凸地圖",
         "status": "Coming soon.",
         "id": "postcard"
     },
     {
-        "index": "BLOG 001",
+        "type": "blog",
+        "index": "NOV. 2024",
+        "name": "SUNFUYEAH100",
+        "link": "blogs/sunfuyeah100"
+    },
+    {
+        "type": "blog",
+        "index": "JULY 2024",
+        "name": "SUNSHINE COAST TRAIL",
+        "link": "blogs/sunshine-coast-trail"
+    },
+    {
+        "type": "blog",
+        "index": "JAN. 2024",
+        "name": "MARATHON",
+        "link": "blogs/hong-kong-marathon"
+    },
+    {   
+        "type": "blog",
+        "index": "SUMMER 2022",
         "name": "FOUR TRAILS",
         "link": "blogs/four-trails"
     },
     {
-        "index": "BLOG 002",
-        "name": "MARATHON",
-        "link": "blogs/hong-kong-marathon"
-    },
-    {
-        "index": "BLOG 003",
-        "name": "SUNFUYEAH100",
-        "link": "blogs/sunfuyeah100"
+        "type": "blog",
+        "index": "SEPT. 2021",
+        "name": "VIA ALPINA",
+        "link": "blogs/via-alpina"
     }
 ]

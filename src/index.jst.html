@@ -1,77 +1,51 @@
-<!-- <div class="intro">
-	<div class="g-text">
-		LKK IS A MAPMAKER FROM HONG KONG. SHE LIKES MAKING MAPS, FINDING NEW WAYS TO VISUALIZE GEOGRAPHY, AND TELLING STORIES.
-	</div>
+<div class="menu-cont">
+	<div class="menu-item projects"><span class="plus">+</span> PROJECTS</div>
+	<div class="menu-item blogs"><span class="plus">+</span> STORIES</div>
+</div>
 
-	<div class="g-text g-cn-cont">
-		<span>LKK</span> <span class="g-text-cn">是來自香港的地圖製作者。她喜歡以新方式將地理資訊視像化，也熱愛用地圖說故事。</span>
-	</div>
-</div> -->
-
-<div class="project-outer">
-<div class="project-list">
-	<div class="project-list-inner">
-	<% data.projects.forEach(function(project, index) { %>
-		<div class="project <% if (index == 0) { %>active<% } %>" data-id="<%- project.id %>" id="<% if (project.index.indexOf('BLOG') == -1) { %><%- project.id%>-nav<% } %>">
-			<% if (project.index.indexOf('BLOG') > -1) { %><a href='<%- project.link %>'><% } else { %><div class="button button-<%- project.id %>" data-id="<%- project.id %>"><% } %>
-			<div class="index">
-				<%- project.index %>
+<div class="lightbox projects">
+	<div class="lightbox-x">X</div>
+	<div class="lightbox-items-cont">
+	<% data.projects.forEach(function(project, i) { %>
+		<% if (project.type == "project") { %>
+			<div class="nav-item project <% if (i == 0) { %>active<% } %>" data-id="<%- project.id %>" id="<%- project.id %>-nav">
+				<div class="button button-<%- project.id %>">
+					<span class="date"><%- project.index %></span>
+					<span class="name"><%- project.name %></span>
+				</div>
 			</div>
-			<div class="name">
-				<%- project.name %>
-			</div>
-			<% if (project.index.indexOf('BLOG') > -1) { %></a><% } else { %></div><% } %>
-		</div>
+		<% } %>
 	<% }) %>
 	</div>
 </div>
+
+
+
+<div class="lightbox blogs">
+	<div class="lightbox-x">X</div>
+	<div class="lightbox-items-cont">
+	<% data.projects.forEach(function(project, index) { %>
+		<% if (project.type == "blog") { %>
+			<div class="nav-item">
+			<a href='<%- project.link %>'>
+				<span class="date"><%- project.index %></span>
+				<span class="name"><%- project.name %></span>
+			</a>
+			</div>
+		<% } %>
+	<% }) %>
+	</div>
 </div>
+
 
 <div class="section active" id="maps">
 <div class="project-cont">
 	<div class="canvas">
-		<!-- <div class="icon"><img src="img/3dicon.png" alt=""></div> -->
 		<div class="inner" id="canvas">
 		</div>
 	</div>
-
-	<div class="more cloth-options more-cloth">
-		<div class="title">PICK A MAP</div>
-		<div class="button active" data-id="four-trails">FOUR TRAILS</div>
-		<div class="button" data-id="kowloon-peak">KOWLOON PEAK</div>
-		<div class="button" data-id="cheung-tsui">CHEUNG TSUI</div>
-		<!-- <div class="button" data-id="howe-sound">HOWE SOUND CREST TRAIL</div> -->
-	</div>
-
-
-	<!-- <div class="more postcard more-postcard">COMING SOON.</div>
-
-	<div class="more more-cloth cloth-scroll-down">
-		<span>MORE ABOUT THIS PROJECT</span> <img src="img/arrow.png" alt="">
-	</div> -->
 </div>
 </div>
-<!-- 
-<div class="more-cloth cloth-body">
-
-	<div class="body-section">
-		<div class="small-text">Map by @lkk</div>
-		<div class="small-text">Type design by @fibikung</div>
-		<div class="small-text">Production by @lkk @hakdim</div>
-		<div class="small-text">Silk screen by Colorful Screen Print</div>
-		<div class="small-text">18" by 18" black cloth</div>
-		<div class="small-text">14" by 14" print</div>
-		<div class="small-text">Hand made silk screen printing on 100% cotton cloth</div>
-		<div class="small-text">Made in hong kong</div>
-	</div>
-
-	<div class="body-section">
-		<div class="small-title">THE MAKING OF</div>
-		<video src="video/lkk-cloth-map.mp4" controls muted></video>
-	</div>
-
-
-</div> -->
 
 <script type="importmap">
 	{
@@ -81,7 +55,6 @@
 		}
 	}
 </script>
-
 <script type="module" src="lib/script.js"></script>
 <script type="module" src="lib/cloth.js"></script>
 <script type="module" src="lib/wallmap.js"></script>
