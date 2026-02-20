@@ -99,12 +99,6 @@ img {
   top: 0;
   left: 0;
 }
-.project-cont.expanded {
-  z-index: 99999;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .project-cont .explore-button {
   width: 25px;
   height: 25px;
@@ -127,6 +121,15 @@ img {
 }
 .project-cont .explore-button.explore .x {
   display: none;
+}
+.project-cont.expanded {
+  z-index: 99999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.project-cont.expanded .explore-button {
+  top: 20px;
 }
 .intro {
   margin: 0 auto 50px auto;
@@ -318,9 +321,9 @@ img {
 }
 .more h3.en {
   letter-spacing: 0;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.5;
-  padding: 20px 0;
+  padding: 20px;
 }
 .more .border-bottom {
   border-bottom: 0.5px solid #7f7f7f;
@@ -333,7 +336,7 @@ img {
   border-bottom: 2px solid #999;
 }
 .more .content {
-  padding: 30px 15px;
+  padding: 30px;
 }
 .more .media-cont {
   width: 100%;
