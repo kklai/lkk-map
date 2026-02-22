@@ -3,12 +3,10 @@
     src: url('/fonts/Hong-Kong-Map-Type.otf');
 }
 
-@font-face {
+/* @font-face {
 	font-family: 'MYuenHK';
-	/*a name to be used later*/
 	src: url('/fonts/MYuenHK-Medium.ttf');
-	/*URL to font*/
-  }
+  } */
 
 
 html,body {
