@@ -14,7 +14,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #070707;
   color: #ececec;
   font-family: 'HK Map Font', 'Varela Round', sans-serif;
   text-align: center;
@@ -100,15 +100,18 @@ img {
   left: 0;
 }
 .project-cont .explore-button {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: calc(100vh - 80px);
+  top: calc(100vh - 100px);
   right: 0;
   z-index: 999;
   opacity: 0.5;
   padding: 25px;
   cursor: pointer;
+}
+.expanded .project-cont .explore-button {
+  width: 25px;
 }
 .project-cont .explore-button .explore {
   display: none;
@@ -225,6 +228,12 @@ img {
 .project-list .index,
 .project-list .name {
   display: inline-block;
+}
+.description {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin: 7px 0 0 0;
 }
 .project-list .index {
   opacity: 0.6;
@@ -367,4 +376,9 @@ img {
 }
 .more a {
   color: #999;
+}
+.footer {
+  font-size: 9px;
+  opacity: 0.5;
+  padding: 50px 0;
 }

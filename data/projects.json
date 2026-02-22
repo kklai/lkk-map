@@ -26,31 +26,36 @@
     {
         "type": "blog",
         "index": "NOV. 2024",
-        "name": "100K ULTRA",
+        "name": "SUNFUYEAH100",
+        "description": "100 KM / 23.5 HOURS",
         "link": "blogs/sunfuyeah100"
     },
     {
         "type": "blog",
         "index": "JULY 2024",
         "name": "SUNSHINE COAST TRAIL",
+        "description": "180 KM / 5 DAYS",
         "link": "blogs/sunshine-coast-trail"
     },
     {
         "type": "blog",
         "index": "JAN. 2024",
         "name": "FIRST MARATHON",
+        "description": "42.195 KM / 3 HOURS 50 MINUTES",
         "link": "blogs/hong-kong-marathon"
     },
     {   
         "type": "blog",
         "index": "SUMMER 2022",
         "name": "FOUR TRAILS HIKES",
+        "description": "398 KM / 4 MONTHS",
         "link": "blogs/four-trails"
     },
     {
         "type": "blog",
         "index": "SEPT. 2021",
         "name": "VIA ALPINA",
+        "description": "390 KM / 2 WEEKS",
         "link": "blogs/via-alpina"
     }
 ]

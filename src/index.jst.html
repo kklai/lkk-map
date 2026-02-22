@@ -30,6 +30,10 @@
 			<a href='<%- project.link %>'>
 				<span class="date"><%- project.index %></span>
 				<span class="name"><%- project.name %></span>
+
+				<% if (project.description) { %>
+				<span class="description"><%- project.description %></span>
+				<% } %>
 			</a>
 			</div>
 		<% } %>
@@ -82,7 +86,7 @@
 <div class="more more-wallmap" style="display: none;">
 	<div class="title">
 		<h3 class="border-bottom">002</h3>
-		<h3 class="cn border-bottom">大型掛牆地圖</h3>
+		<h3 class="cn border-bottom">掛牆地圖</h3>
 		<h3 class="en border-bottom">DETAILED WALL MAP</h3>
 	</div>
 	<div class="content border-bottom">
@@ -113,6 +117,10 @@
 		</div>
 		<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
 	</div>
+</div>
+
+<div class="footer">
+	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
 </div>
 
 </div>

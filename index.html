@@ -39,7 +39,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  background: #000;
+  background: #070707;
   color: #ececec;
   font-family: 'HK Map Font', 'Varela Round', sans-serif;
   text-align: center;
@@ -125,15 +125,18 @@ img {
   left: 0;
 }
 .project-cont .explore-button {
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: calc(100vh - 80px);
+  top: calc(100vh - 100px);
   right: 0;
   z-index: 999;
   opacity: 0.5;
   padding: 25px;
   cursor: pointer;
+}
+.expanded .project-cont .explore-button {
+  width: 25px;
 }
 .project-cont .explore-button .explore {
   display: none;
@@ -250,6 +253,12 @@ img {
 .project-list .index,
 .project-list .name {
   display: inline-block;
+}
+.description {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin: 7px 0 0 0;
 }
 .project-list .index {
   opacity: 0.6;
@@ -393,6 +402,11 @@ img {
 .more a {
   color: #999;
 }
+.footer {
+  font-size: 9px;
+  opacity: 0.5;
+  padding: 50px 0;
+}
 </style>
 </head>
 <body>
@@ -461,7 +475,11 @@ img {
 			<div class="nav-item">
 			<a href='blogs/sunfuyeah100'>
 				<span class="date">NOV. 2024</span>
-				<span class="name">100K ULTRA</span>
+				<span class="name">SUNFUYEAH100</span>
+
+				
+				<span class="description">100 KM / 23.5 HOURS</span>
+				
 			</a>
 			</div>
 		
@@ -471,6 +489,10 @@ img {
 			<a href='blogs/sunshine-coast-trail'>
 				<span class="date">JULY 2024</span>
 				<span class="name">SUNSHINE COAST TRAIL</span>
+
+				
+				<span class="description">180 KM / 5 DAYS</span>
+				
 			</a>
 			</div>
 		
@@ -480,6 +502,10 @@ img {
 			<a href='blogs/hong-kong-marathon'>
 				<span class="date">JAN. 2024</span>
 				<span class="name">FIRST MARATHON</span>
+
+				
+				<span class="description">42.195 KM / 3 HOURS 50 MINUTES</span>
+				
 			</a>
 			</div>
 		
@@ -489,6 +515,10 @@ img {
 			<a href='blogs/four-trails'>
 				<span class="date">SUMMER 2022</span>
 				<span class="name">FOUR TRAILS HIKES</span>
+
+				
+				<span class="description">398 KM / 4 MONTHS</span>
+				
 			</a>
 			</div>
 		
@@ -498,6 +528,10 @@ img {
 			<a href='blogs/via-alpina'>
 				<span class="date">SEPT. 2021</span>
 				<span class="name">VIA ALPINA</span>
+
+				
+				<span class="description">390 KM / 2 WEEKS</span>
+				
 			</a>
 			</div>
 		
@@ -550,7 +584,7 @@ img {
 <div class="more more-wallmap" style="display: none;">
 	<div class="title">
 		<h3 class="border-bottom">002</h3>
-		<h3 class="cn border-bottom">大型掛牆地圖</h3>
+		<h3 class="cn border-bottom">掛牆地圖</h3>
 		<h3 class="en border-bottom">DETAILED WALL MAP</h3>
 	</div>
 	<div class="content border-bottom">
@@ -581,6 +615,10 @@ img {
 		</div>
 		<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
 	</div>
+</div>
+
+<div class="footer">
+	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
 </div>
 
 </div>
