@@ -356,8 +356,9 @@ img {
   width: 100%;
 }
 .more .caption {
-  font-size: 14px;
+  font-size: 13px;
   font-style: italic;
+  color: #555;
 }
 .more p {
   font-family: Helvetica, sans-serif;
