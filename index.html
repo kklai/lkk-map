@@ -248,12 +248,6 @@ img {
 .project-list .name {
   display: inline-block;
 }
-.description {
-  display: block;
-  font-size: 11px;
-  color: #999;
-  margin: 7px 0 0 0;
-}
 .project-list .index {
   opacity: 0.6;
   width: 90px;
@@ -296,10 +290,11 @@ img {
 .lightbox {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #111;
   z-index: 99999;
   position: absolute;
   display: none;
+  font-size: 13px;
 }
 .lightbox .lightbox-x {
   position: absolute;
@@ -327,8 +322,14 @@ img {
 .lightbox .date {
   display: block;
   color: #999;
-  font-size: 13px;
+  font-size: 11px;
   padding-bottom: 10px;
+}
+.lightbox .description {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin: 7px 0 0 0;
 }
 .more {
   max-width: 460px;
@@ -567,7 +568,7 @@ img {
 		<div class="break"></div>
 		<p>Making this map was a way to commemorate my journey. I did everything from sourcing the fabric to working with a local family shop for the screen printing. It was an all new learning experience for me. Fibi Kung, a designer friend, created a typeface for this project. AM, a friend who runs a local brand Hakdim, helped with logistics. We sold over 200 copies.</p>
 		<div class="media-cont">
-			<video poster="img/four-trails-002.jpg" loop muted playsinline preload="none" data-lazy="true">
+			<video poster="img/four-trails-002.jpg" loop muted playsinline autoplay preload="none" data-lazy="true">
 				<source src="img/four-trails-002.mp4" type="video/mp4">
 				Sorry, your browser doesn't support embedded videos.
 			</video>
@@ -606,7 +607,7 @@ img {
 	<div class="content border-bottom">
 		<p>Years ago in Switzerland, I came across this raised relief postcard. I loved the style and I've always wanted to make one of Hong Kong.</p>
 		<div class="media-cont">
-			<img src="img/switzerland.jpg" alt="">
+			<img loading="lazy" src="img/switzerland.jpg" alt="">
 		</div>
 		<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
 	</div>

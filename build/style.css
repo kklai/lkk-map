@@ -223,12 +223,6 @@ img {
 .project-list .name {
   display: inline-block;
 }
-.description {
-  display: block;
-  font-size: 11px;
-  color: #999;
-  margin: 7px 0 0 0;
-}
 .project-list .index {
   opacity: 0.6;
   width: 90px;
@@ -271,10 +265,11 @@ img {
 .lightbox {
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #111;
   z-index: 99999;
   position: absolute;
   display: none;
+  font-size: 13px;
 }
 .lightbox .lightbox-x {
   position: absolute;
@@ -302,8 +297,14 @@ img {
 .lightbox .date {
   display: block;
   color: #999;
-  font-size: 13px;
+  font-size: 11px;
   padding-bottom: 10px;
+}
+.lightbox .description {
+  display: block;
+  font-size: 11px;
+  color: #999;
+  margin: 7px 0 0 0;
 }
 .more {
   max-width: 460px;
