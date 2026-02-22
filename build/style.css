@@ -119,10 +119,10 @@ img {
 .project-cont .explore-button .x {
   display: block;
 }
-.project-cont .explore-button.explore .explore {
+.project-cont .explore-button.explore-mode .explore {
   display: block;
 }
-.project-cont .explore-button.explore .x {
+.project-cont .explore-button.explore-mode .x {
   display: none;
 }
 .project-cont.expanded {
