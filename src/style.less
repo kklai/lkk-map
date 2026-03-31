@@ -90,7 +90,7 @@ img {
 
 .canvas-section {
 	width: 100vw;
-	height: 100vh;
+	height: 100svh;
 	position: relative;
 	overflow: hidden;
 	scroll-snap-align: start;
@@ -278,24 +278,48 @@ img {
 
 .info-btn {
 	position: absolute;
-	bottom: 25px;
+	bottom: calc(25px + env(safe-area-inset-bottom));
 	right: 25px;
 	width: 28px;
 	height: 28px;
 	border-radius: 50%;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	color: rgba(255, 255, 255, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background: rgba(0, 0, 0, 0.35);
+	color: rgba(255, 255, 255, 0.8);
 	font-size: 14px;
 	line-height: 28px;
 	text-align: center;
 	cursor: pointer;
-	z-index: 99;
+	z-index: 9999;
 	font-family: Helvetica, sans-serif;
 	font-style: normal;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 
 	&:hover {
-		border-color: rgba(255, 255, 255, 0.8);
+		border-color: rgba(255, 255, 255, 0.9);
+		color: #fff;
+	}
+}
+
+.nav-arrow {
+	position: absolute;
+	bottom: calc(25px + env(safe-area-inset-bottom));
+	left: 25px;
+	z-index: 9999;
+	color: rgba(255, 255, 255, 0.6);
+	font-size: 20px;
+	cursor: pointer;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+
+	&:hover {
 		color: rgba(255, 255, 255, 0.9);
+	}
+
+	&.nav-arrow-up {
+		bottom: auto;
+		top: 25px;
 	}
 }
 
@@ -445,7 +469,7 @@ img {
 
 	.story-date {
 		display: block;
-		color: #666;
+		color: #bbb;
 		font-size: 11px;
 		margin-bottom: 6px;
 	}

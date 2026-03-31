@@ -63,7 +63,7 @@ function compile() {
 			out += '<head>\n';
 			out += '<title>LKK MAP</title>\n';
 			out += '<meta charset="utf-8"> \n';
-			out += '<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">\n';
+			out += '<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">\n';
 			out += '<link rel="shortcut icon" href="img/lkk-logo-06.webp" />\n';
 			out += '<link rel="apple-touch-icon" sizes="128x128" href="app-icon.png">\n'
 			out += '<link rel="stylesheet" href="https://use.typekit.net/nri5irx.css">\n';
