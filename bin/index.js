@@ -42,7 +42,7 @@ function compile() {
 	// 	}
 	// })
 	
-	var pages = ["index"];
+	var pages = ["index", "stories"];
 
 	var c = child.exec("lessc src/style.less " + currentPath + "/build/style.css", (err, stdout, stderr) => {
 
@@ -52,9 +52,7 @@ function compile() {
 
 		pages.forEach(function(page){
 
-			// var html = page == "index" ? fs.readFileSync("src/index.jst.html", "utf8") : fs.readFileSync("src/shop.jst.html", "utf8");
-
-			var html = page == "index" ? fs.readFileSync("src/index.jst.html", "utf8") : fs.readFileSync("src/cloth.jst.html", "utf8");
+			var html = fs.readFileSync("src/" + page + ".jst.html", "utf8");
 
 			var ejs_rendered = ejs.render(html, {pages: pages, page: page, d3: d3, data: data});
 
@@ -98,7 +96,13 @@ function compile() {
 			out += '</body>\n'
 			out += '</html>\n'
 
-			var output_name = page == "index" ? "index" : "projects/" + page + "/index";
+			var output_name;
+			if (page == "index") {
+				output_name = "index";
+			} else {
+				if (!fs.existsSync(page)) fs.mkdirSync(page, { recursive: true });
+				output_name = page + "/index";
+			}
 
 			fs.writeFileSync(output_name + ".html", out);
 		})

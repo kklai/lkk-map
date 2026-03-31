@@ -1,4 +1,4 @@
-[   
+[
     {
         "type": "project",
         "index": "001",
@@ -28,34 +28,42 @@
         "index": "NOV. 2024",
         "name": "SUNFUYEAH100",
         "description": "100 KM / 23.5 HOURS",
-        "link": "blogs/sunfuyeah100"
+        "link": "blogs/sunfuyeah100",
+        "img": "blogs/sunfuyeah100/img/end.jpg"
     },
     {
         "type": "blog",
         "index": "JULY 2024",
         "name": "SUNSHINE COAST TRAIL",
         "description": "180 KM / 5 DAYS",
-        "link": "blogs/sunshine-coast-trail"
+        "link": "blogs/sunshine-coast-trail",
+        "img": "blogs/sunshine-coast-trail/images/tinhat.jpg"
     },
     {
         "type": "blog",
         "index": "JAN. 2024",
         "name": "FIRST MARATHON",
         "description": "42.195 KM / 3 HOURS 50 MINUTES",
-        "link": "blogs/hong-kong-marathon"
+        "link": "blogs/hong-kong-marathon",
+        "img": "blogs/hong-kong-marathon/img/run2.jpeg",
+        "bgposition": "0 80%"
     },
-    {   
+    {
         "type": "blog",
         "index": "SUMMER 2022",
         "name": "FOUR TRAILS HIKES",
         "description": "398 KM / 4 MONTHS",
-        "link": "blogs/four-trails"
+        "link": "blogs/four-trails",
+        "img": "blogs/four-trails/img/IMG_8521.jpg",
+        "bgposition": "0 76%"
     },
     {
         "type": "blog",
         "index": "SEPT. 2021",
         "name": "VIA ALPINA",
         "description": "390 KM / 2 WEEKS",
-        "link": "blogs/via-alpina"
+        "link": "blogs/via-alpina",
+        "img": "blogs/via-alpina/photos/1007_snow.jpg",
+        "bgposition": "0 85%"
     }
 ]

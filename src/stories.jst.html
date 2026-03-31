@@ -1,0 +1,22 @@
+<div class="menu-cont">
+	<a href="/">PROJECTS</a>
+	<div class="menu-active">STORIES</div>
+</div>
+
+<div class="stories-cont">
+	<% data.projects.forEach(function(project) { %>
+		<% if (project.type == "blog") { %>
+		<a href="/<%= project.link %>" class="story-item"<% if (project.img) { %> style="background-image: url('/<%= project.img %>');<% if (project.bgposition) { %> background-position: <%= project.bgposition %>;<% } %>"<% } %>>
+			<span class="story-date"><%= project.index %></span>
+			<span class="story-name"><%= project.name %></span>
+			<% if (project.description) { %>
+			<span class="story-description"><%= project.description %></span>
+			<% } %>
+		</a>
+		<% } %>
+	<% }) %>
+</div>
+
+<div class="footer">
+	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
+</div>

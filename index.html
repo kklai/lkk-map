@@ -38,6 +38,9 @@ html {
   font-family: 'HK Map Font', 'Varela Round', sans-serif;
   text-align: center;
 }
+html {
+  scroll-snap-type: y mandatory;
+}
 html.expanded {
   width: 100vw;
   height: 100vh;
@@ -98,60 +101,21 @@ img {
   font-size: 8px;
   opacity: 0.6;
 }
-.project-cont {
-  margin: 0 auto;
-}
-.project-cont .canvas {
-  margin: 0 auto;
-  position: relative;
-  pointer-events: none;
-}
-.project-cont .canvas.explore {
-  pointer-events: auto;
-}
-.project-cont .canvas .inner {
+.canvas-section {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
-.project-cont .canvas canvas {
+.canvas-section .canvas-inner {
+  width: 100%;
+  height: 100%;
+}
+.canvas-section canvas {
   position: absolute;
   top: 0;
   left: 0;
-}
-.project-cont .explore-button {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: calc(100vh - 100px);
-  right: 0;
-  z-index: 999;
-  opacity: 0.5;
-  padding: 25px;
-  cursor: pointer;
-}
-.expanded .project-cont .explore-button {
-  width: 25px;
-}
-.project-cont .explore-button .explore {
-  display: none;
-}
-.project-cont .explore-button .x {
-  display: block;
-}
-.project-cont .explore-button.explore-mode .explore {
-  display: block;
-}
-.project-cont .explore-button.explore-mode .x {
-  display: none;
-}
-.project-cont.expanded {
-  z-index: 99999;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.project-cont.expanded .explore-button {
-  top: 20px;
 }
 .intro {
   margin: 0 auto 50px auto;
@@ -173,16 +137,16 @@ img {
   top: 17px;
   right: 15px;
   z-index: 999;
-  text-align: right;
   font-size: 13px;
   line-height: 24px;
+  text-align: right;
   color: #ddd;
 }
-.menu-cont .plus {
-  font-size: 20px;
-}
-.menu-cont .menu-item {
-  cursor: pointer;
+.menu-cont a,
+.menu-cont div {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
 }
 .nav {
   margin: 0 auto 50px auto;
@@ -199,12 +163,6 @@ img {
   opacity: 1;
   border-bottom: 2px solid #fff;
   padding-bottom: 2px;
-}
-.section {
-  display: none;
-}
-.section.active {
-  display: block;
 }
 #paper {
   overflow: hidden;
@@ -287,53 +245,58 @@ img {
   line-height: 1.5;
   opacity: 0.5;
 }
-.lightbox {
-  width: 100%;
-  height: 100%;
-  background-color: #111;
-  z-index: 99999;
+.info-btn {
   position: absolute;
-  display: none;
-  font-size: 13px;
-}
-.lightbox .lightbox-x {
-  position: absolute;
-  right: 0;
-  top: 0;
-  transform: scaleY(70%);
-  transform-origin: top right;
-  font-size: 30px;
-  padding: 50px 30px;
+  bottom: 25px;
+  right: 25px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
   cursor: pointer;
+  z-index: 99;
+  font-family: Helvetica, sans-serif;
+  font-style: normal;
 }
-.lightbox .lightbox-items-cont {
-  position: absolute;
-  width: 100%;
-  top: 50%;
-  transform: translate(0, -50%);
-}
-.lightbox .nav-item {
-  padding: 20px 0;
-  cursor: pointer;
-}
-.lightbox a {
-  text-decoration: none;
-}
-.lightbox .date {
-  display: block;
-  color: #999;
-  font-size: 11px;
-  padding-bottom: 10px;
-}
-.lightbox .description {
-  display: block;
-  font-size: 11px;
-  color: #999;
-  margin: 7px 0 0 0;
+.info-btn:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 .more {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow-y: auto;
+  z-index: 99999;
+  background: #111;
+  max-width: none;
+  margin: 0;
+  border: none;
+  width: 100%;
+}
+.more.open {
+  display: block;
+}
+.more .more-x {
+  position: sticky;
+  top: 0;
+  text-align: right;
+  padding: 20px 25px 0 0;
+  font-size: 22px;
+  transform: scaleY(70%);
+  transform-origin: top right;
+  cursor: pointer;
+  z-index: 1;
+}
+.more .inner-cont {
   max-width: 460px;
-  margin: 100px auto 20px auto;
+  margin: 20px auto 60px auto;
   border: 2px solid #999;
   width: calc(100% - 30px);
 }
@@ -399,6 +362,56 @@ img {
 .more a {
   color: #999;
 }
+.stories-cont {
+  padding: 120px 0 60px 0;
+}
+.stories-cont .story-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 20vh;
+  text-decoration: none;
+  padding: 20px 30px;
+  border-bottom: 0.5px solid #333;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.stories-cont .story-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.stories-cont .story-item .story-date,
+.stories-cont .story-item .story-name,
+.stories-cont .story-item .story-description {
+  position: relative;
+  z-index: 1;
+}
+.stories-cont .story-item:first-child {
+  border-top: 0.5px solid #333;
+}
+.stories-cont .story-date {
+  display: block;
+  color: #666;
+  font-size: 11px;
+  margin-bottom: 6px;
+}
+.stories-cont .story-name {
+  display: block;
+  color: #ddd;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+.stories-cont .story-description {
+  display: block;
+  color: #bbb;
+  font-size: 11px;
+}
+.menu-active {
+  cursor: default;
+}
 .footer {
   font-size: 9px;
   opacity: 0.5;
@@ -408,223 +421,109 @@ img {
 </head>
 <body>
 <div class="g-header"><a href="https://www.lkk-map.com/"><div class="g-hed-text"><p class="g-big-hed" a href="/"><img src="https://www.lkk-map.com/lkk-map-logo-white.png" alt="LKK MAP" /></p></div></a></div><div class="menu-cont">
-	<div class="menu-item projects"><span class="plus">+</span> PROJECTS</div>
-	<div class="menu-item blogs"><span class="plus">+</span> STORIES</div>
-</div>
-
-<div class="lightbox projects">
-	<div class="lightbox-x">X</div>
-	<div class="lightbox-items-cont">
-	
-		
-			<div class="nav-item project active" data-id="cloth" id="cloth-nav">
-				<div class="button button-cloth">
-					<span class="date">001</span>
-					<span class="name">SILKSCREEN CLOTH MAP</span>
-				</div>
-			</div>
-		
-	
-		
-			<div class="nav-item project " data-id="wallmap" id="wallmap-nav">
-				<div class="button button-wallmap">
-					<span class="date">002</span>
-					<span class="name">DETAILED WALL MAP</span>
-				</div>
-			</div>
-		
-	
-		
-			<div class="nav-item project " data-id="postcard" id="postcard-nav">
-				<div class="button button-postcard">
-					<span class="date">003</span>
-					<span class="name">RAISED RELIEF POSTCARD</span>
-				</div>
-			</div>
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-	</div>
+	<a href="/">PROJECTS</a>
+	<a href="/stories/">STORIES</a>
 </div>
 
 
-
-<div class="lightbox blogs">
-	<div class="lightbox-x">X</div>
-	<div class="lightbox-items-cont">
-	
-		
-	
-		
-	
-		
-	
-		
-			<div class="nav-item">
-			<a href='blogs/sunfuyeah100'>
-				<span class="date">NOV. 2024</span>
-				<span class="name">SUNFUYEAH100</span>
-
-				
-				<span class="description">100 KM / 23.5 HOURS</span>
-				
-			</a>
-			</div>
-		
-	
-		
-			<div class="nav-item">
-			<a href='blogs/sunshine-coast-trail'>
-				<span class="date">JULY 2024</span>
-				<span class="name">SUNSHINE COAST TRAIL</span>
-
-				
-				<span class="description">180 KM / 5 DAYS</span>
-				
-			</a>
-			</div>
-		
-	
-		
-			<div class="nav-item">
-			<a href='blogs/hong-kong-marathon'>
-				<span class="date">JAN. 2024</span>
-				<span class="name">FIRST MARATHON</span>
-
-				
-				<span class="description">42.195 KM / 3 HOURS 50 MINUTES</span>
-				
-			</a>
-			</div>
-		
-	
-		
-			<div class="nav-item">
-			<a href='blogs/four-trails'>
-				<span class="date">SUMMER 2022</span>
-				<span class="name">FOUR TRAILS HIKES</span>
-
-				
-				<span class="description">398 KM / 4 MONTHS</span>
-				
-			</a>
-			</div>
-		
-	
-		
-			<div class="nav-item">
-			<a href='blogs/via-alpina'>
-				<span class="date">SEPT. 2021</span>
-				<span class="name">VIA ALPINA</span>
-
-				
-				<span class="description">390 KM / 2 WEEKS</span>
-				
-			</a>
-			</div>
-		
-	
-	</div>
-</div>
-
-
-<div class="section active" id="maps">
-<div class="project-cont">
-	<div class="explore-button">
-		<span class="explore" style="display: block;"><img src="img/explore-3d.png" alt=""></span>
-		<span class="x" style="display: none;"><img src="img/exit-3d.png" alt=""></span>
-	</div>
-	<div class="canvas">
-		<div class="inner" id="canvas">
-		</div>
-	</div>
+<div class="canvas-section" id="cloth-section">
+	<div class="canvas-inner" id="canvas-cloth"></div>
+	<div class="info-btn" data-more="cloth">i</div>
 </div>
 
 <div class="more more-cloth">
-	<div class="title">
-		<h3 class="border-bottom">001</h3>
-		<h3 class="cn border-bottom">絲印四徑地圖</h3>
-		<h3 class="en border-bottom">SILK SCREEN FOUR TRAILS <br>CLOTH MAP</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>CLOTH 18 x 18 inches</p>
-		<p>PRINT 14 x 14 inches</p>
-		<div class="break"></div>
-		<p>Silk screen by Colorful Screen Print</p>
-		<p>Map by @lkk</p>
-		<p>Type design by @fibikung</p>
-		<p>Production by @lkk @hakdim</p>
-	</div>
-	<div class="content border-bottom">
-		<p>In the summer of 2022, I hiked the Hong Kong four trails. It was one of the hardest and most memorable things I've ever done. You can read more about my journey <a href="/blogs/four-trails/">in this interactive</a>.</p>
-		<div class="break"></div>
-		<p>Making this map was a way to commemorate my journey. I did everything from sourcing the fabric to working with a local family shop for the screen printing. It was an all new learning experience for me. Fibi Kung, a designer friend, created a typeface for this project. AM, a friend who runs a local brand Hakdim, helped with logistics. We sold over 200 copies.</p>
-		<div class="media-cont">
-			<video poster="img/four-trails-002.jpg" loop muted playsinline autoplay preload="none" data-lazy="true">
-				<source src="img/four-trails-002.mp4" type="video/mp4">
-				Sorry, your browser doesn't support embedded videos.
-			</video>
-			<p class="caption">Printing at Colorful Screen Print</p>
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">001</h3>
+			<h3 class="cn border-bottom">絲印四徑地圖</h3>
+			<h3 class="en border-bottom">SILK SCREEN FOUR TRAILS <br>CLOTH MAP</h3>
 		</div>
+		<div class="content border-bottom">
+			<p>CLOTH 18 x 18 inches</p>
+			<p>PRINT 14 x 14 inches</p>
+			<div class="break"></div>
+			<p>Silk screen by Colorful Screen Print</p>
+			<p>Map by @lkk</p>
+			<p>Type design by @fibikung</p>
+			<p>Production by @lkk @hakdim</p>
+		</div>
+		<div class="content border-bottom">
+			<p>In the summer of 2022, I hiked the Hong Kong four trails. It was one of the hardest and most memorable things I've ever done. You can read more about my journey <a href="/blogs/four-trails/">in this interactive</a>.</p>
+			<div class="break"></div>
+			<p>Making this map was a way to commemorate my journey. I did everything from sourcing the fabric to working with a local family shop for the screen printing. It was an all new learning experience for me. Fibi Kung, a designer friend, created a typeface for this project. AM, a friend who runs a local brand Hakdim, helped with logistics. We sold over 200 copies.</p>
+			<div class="media-cont">
+				<video poster="img/four-trails-002.jpg" loop muted playsinline autoplay preload="none" data-lazy="true">
+					<source src="img/four-trails-002.mp4" type="video/mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				<p class="caption">Printing at Colorful Screen Print</p>
+			</div>
 
-		<p>Here are some close ups of the map.</p>
+			<p>Here are some close ups of the map.</p>
 
-		<div class="media-cont"><img loading="lazy" src="img/M-1742.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1743.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1744.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1767.jpg" alt=""></div>
-	</div>	
-</div>
-
-<div class="more more-wallmap" style="display: none;">
-	<div class="title">
-		<h3 class="border-bottom">002</h3>
-		<h3 class="cn border-bottom">掛牆地圖</h3>
-		<h3 class="en border-bottom">DETAILED WALL MAP</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>91 x 61 cm</p>
-		<div class="break"></div>
-		<p>Printing at Graffika Imaging</p>
-	</div>
-	<div class="content border-bottom">
-		<p>I've always admired National Geographic maps with detailed landscapes and labeling. I have a treasure chest at home full of old maps.</p>
-		<div class="break"></div>
-		<p>This wall map is my take on that kind of detailed mapping to my favorite trails in Hong Kong.</p>
+			<div class="media-cont"><img loading="lazy" src="img/M-1742.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1743.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1744.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1767.jpg" alt=""></div>
+		</div>
 	</div>
 </div>
 
-<div class="more more-postcard" style="display: none;">
-	<div class="title">
-		<h3 class="border-bottom">003</h3>
-		<h3 class="cn border-bottom">凹凸明信片</h3>
-		<h3 class="en border-bottom">RAISED RELIEF POSTCARD</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>4 x 6 inches</p>
-	</div>
-	<div class="content border-bottom">
-		<p>Years ago in Switzerland, I came across this raised relief postcard. I loved the style and I've always wanted to make one of Hong Kong.</p>
-		<div class="media-cont">
-			<img loading="lazy" src="img/switzerland.jpg" alt="">
+
+<div class="canvas-section" id="wallmap-section">
+	<div class="canvas-inner" id="canvas-wallmap"></div>
+	<div class="info-btn" data-more="wallmap">i</div>
+</div>
+
+<div class="more more-wallmap">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">002</h3>
+			<h3 class="cn border-bottom">掛牆地圖</h3>
+			<h3 class="en border-bottom">DETAILED WALL MAP</h3>
 		</div>
-		<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
+		<div class="content border-bottom">
+			<p>91 x 61 cm</p>
+		</div>
+		<div class="content border-bottom">
+			<p>I've always admired National Geographic maps with detailed landscapes and labeling. I have a treasure chest at home full of old maps.</p>
+			<div class="break"></div>
+			<p>This wall map is my take on that kind of detailed mapping to my favorite trails in Hong Kong.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="canvas-section" id="postcard-section">
+	<div class="canvas-inner" id="canvas-postcard"></div>
+	<div class="info-btn" data-more="postcard">i</div>
+</div>
+
+<div class="more more-postcard">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">003</h3>
+			<h3 class="cn border-bottom">凹凸明信片</h3>
+			<h3 class="en border-bottom">RAISED RELIEF POSTCARD</h3>
+		</div>
+		<div class="content border-bottom">
+			<p>4 x 6 inches</p>
+		</div>
+		<div class="content border-bottom">
+			<p>Years ago in Switzerland, I came across this raised relief postcard. I loved the style and I've always wanted to make one of Hong Kong.</p>
+			<div class="media-cont">
+				<img loading="lazy" src="img/switzerland.jpg" alt="">
+			</div>
+			<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
+		</div>
 	</div>
 </div>
 
 <div class="footer">
 	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
-</div>
-
 </div>
 
 <script type="importmap">
@@ -639,7 +538,6 @@ img {
 <script type="module" src="lib/cloth.js"></script>
 <script type="module" src="lib/wallmap.js"></script>
 <script type="module" src="lib/postcard.js"></script>
-
 
 <div class="g-footer"><div class="g-small">© LKK MAP 2025</div></div></body>
 </html>

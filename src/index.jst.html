@@ -1,135 +1,107 @@
 <div class="menu-cont">
-	<div class="menu-item projects"><span class="plus">+</span> PROJECTS</div>
-	<div class="menu-item blogs"><span class="plus">+</span> STORIES</div>
-</div>
-
-<div class="lightbox projects">
-	<div class="lightbox-x">X</div>
-	<div class="lightbox-items-cont">
-	<% data.projects.forEach(function(project, i) { %>
-		<% if (project.type == "project") { %>
-			<div class="nav-item project <% if (i == 0) { %>active<% } %>" data-id="<%- project.id %>" id="<%- project.id %>-nav">
-				<div class="button button-<%- project.id %>">
-					<span class="date"><%- project.index %></span>
-					<span class="name"><%- project.name %></span>
-				</div>
-			</div>
-		<% } %>
-	<% }) %>
-	</div>
+	<a href="/">PROJECTS</a>
+	<a href="/stories/">STORIES</a>
 </div>
 
 
-
-<div class="lightbox blogs">
-	<div class="lightbox-x">X</div>
-	<div class="lightbox-items-cont">
-	<% data.projects.forEach(function(project, index) { %>
-		<% if (project.type == "blog") { %>
-			<div class="nav-item">
-			<a href='<%- project.link %>'>
-				<span class="date"><%- project.index %></span>
-				<span class="name"><%- project.name %></span>
-
-				<% if (project.description) { %>
-				<span class="description"><%- project.description %></span>
-				<% } %>
-			</a>
-			</div>
-		<% } %>
-	<% }) %>
-	</div>
-</div>
-
-
-<div class="section active" id="maps">
-<div class="project-cont">
-	<div class="explore-button">
-		<span class="explore" style="display: block;"><img src="img/explore-3d.png" alt=""></span>
-		<span class="x" style="display: none;"><img src="img/exit-3d.png" alt=""></span>
-	</div>
-	<div class="canvas">
-		<div class="inner" id="canvas">
-		</div>
-	</div>
+<div class="canvas-section" id="cloth-section">
+	<div class="canvas-inner" id="canvas-cloth"></div>
+	<div class="info-btn" data-more="cloth">i</div>
 </div>
 
 <div class="more more-cloth">
-	<div class="title">
-		<h3 class="border-bottom">001</h3>
-		<h3 class="cn border-bottom">絲印四徑地圖</h3>
-		<h3 class="en border-bottom">SILK SCREEN FOUR TRAILS <br>CLOTH MAP</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>CLOTH 18 x 18 inches</p>
-		<p>PRINT 14 x 14 inches</p>
-		<div class="break"></div>
-		<p>Silk screen by Colorful Screen Print</p>
-		<p>Map by @lkk</p>
-		<p>Type design by @fibikung</p>
-		<p>Production by @lkk @hakdim</p>
-	</div>
-	<div class="content border-bottom">
-		<p>In the summer of 2022, I hiked the Hong Kong four trails. It was one of the hardest and most memorable things I've ever done. You can read more about my journey <a href="/blogs/four-trails/">in this interactive</a>.</p>
-		<div class="break"></div>
-		<p>Making this map was a way to commemorate my journey. I did everything from sourcing the fabric to working with a local family shop for the screen printing. It was an all new learning experience for me. Fibi Kung, a designer friend, created a typeface for this project. AM, a friend who runs a local brand Hakdim, helped with logistics. We sold over 200 copies.</p>
-		<div class="media-cont">
-			<video poster="img/four-trails-002.jpg" loop muted playsinline autoplay preload="none" data-lazy="true">
-				<source src="img/four-trails-002.mp4" type="video/mp4">
-				Sorry, your browser doesn't support embedded videos.
-			</video>
-			<p class="caption">Printing at Colorful Screen Print</p>
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">001</h3>
+			<h3 class="cn border-bottom">絲印四徑地圖</h3>
+			<h3 class="en border-bottom">SILK SCREEN FOUR TRAILS <br>CLOTH MAP</h3>
 		</div>
+		<div class="content border-bottom">
+			<p>CLOTH 18 x 18 inches</p>
+			<p>PRINT 14 x 14 inches</p>
+			<div class="break"></div>
+			<p>Silk screen by Colorful Screen Print</p>
+			<p>Map by @lkk</p>
+			<p>Type design by @fibikung</p>
+			<p>Production by @lkk @hakdim</p>
+		</div>
+		<div class="content border-bottom">
+			<p>In the summer of 2022, I hiked the Hong Kong four trails. It was one of the hardest and most memorable things I've ever done. You can read more about my journey <a href="/blogs/four-trails/">in this interactive</a>.</p>
+			<div class="break"></div>
+			<p>Making this map was a way to commemorate my journey. I did everything from sourcing the fabric to working with a local family shop for the screen printing. It was an all new learning experience for me. Fibi Kung, a designer friend, created a typeface for this project. AM, a friend who runs a local brand Hakdim, helped with logistics. We sold over 200 copies.</p>
+			<div class="media-cont">
+				<video poster="img/four-trails-002.jpg" loop muted playsinline autoplay preload="none" data-lazy="true">
+					<source src="img/four-trails-002.mp4" type="video/mp4">
+					Sorry, your browser doesn't support embedded videos.
+				</video>
+				<p class="caption">Printing at Colorful Screen Print</p>
+			</div>
 
-		<p>Here are some close ups of the map.</p>
+			<p>Here are some close ups of the map.</p>
 
-		<div class="media-cont"><img loading="lazy" src="img/M-1742.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1743.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1744.jpg" alt=""></div>
-		<div class="media-cont"><img loading="lazy" src="img/M-1767.jpg" alt=""></div>
-	</div>	
-</div>
-
-<div class="more more-wallmap" style="display: none;">
-	<div class="title">
-		<h3 class="border-bottom">002</h3>
-		<h3 class="cn border-bottom">掛牆地圖</h3>
-		<h3 class="en border-bottom">DETAILED WALL MAP</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>91 x 61 cm</p>
-		<div class="break"></div>
-		<p>Printing at Graffika Imaging</p>
-	</div>
-	<div class="content border-bottom">
-		<p>I've always admired National Geographic maps with detailed landscapes and labeling. I have a treasure chest at home full of old maps.</p>
-		<div class="break"></div>
-		<p>This wall map is my take on that kind of detailed mapping to my favorite trails in Hong Kong.</p>
+			<div class="media-cont"><img loading="lazy" src="img/M-1742.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1743.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1744.jpg" alt=""></div>
+			<div class="media-cont"><img loading="lazy" src="img/M-1767.jpg" alt=""></div>
+		</div>
 	</div>
 </div>
 
-<div class="more more-postcard" style="display: none;">
-	<div class="title">
-		<h3 class="border-bottom">003</h3>
-		<h3 class="cn border-bottom">凹凸明信片</h3>
-		<h3 class="en border-bottom">RAISED RELIEF POSTCARD</h3>
-	</div>
-	<div class="content border-bottom">
-		<p>4 x 6 inches</p>
-	</div>
-	<div class="content border-bottom">
-		<p>Years ago in Switzerland, I came across this raised relief postcard. I loved the style and I've always wanted to make one of Hong Kong.</p>
-		<div class="media-cont">
-			<img loading="lazy" src="img/switzerland.jpg" alt="">
+
+<div class="canvas-section" id="wallmap-section">
+	<div class="canvas-inner" id="canvas-wallmap"></div>
+	<div class="info-btn" data-more="wallmap">i</div>
+</div>
+
+<div class="more more-wallmap">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">002</h3>
+			<h3 class="cn border-bottom">掛牆地圖</h3>
+			<h3 class="en border-bottom">DETAILED WALL MAP</h3>
 		</div>
-		<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
+		<div class="content border-bottom">
+			<p>91 x 61 cm</p>
+		</div>
+		<div class="content border-bottom">
+			<p>I've always admired National Geographic maps with detailed landscapes and labeling. I have a treasure chest at home full of old maps.</p>
+			<div class="break"></div>
+			<p>This wall map is my take on that kind of detailed mapping to my favorite trails in Hong Kong.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="canvas-section" id="postcard-section">
+	<div class="canvas-inner" id="canvas-postcard"></div>
+	<div class="info-btn" data-more="postcard">i</div>
+</div>
+
+<div class="more more-postcard">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">003</h3>
+			<h3 class="cn border-bottom">凹凸明信片</h3>
+			<h3 class="en border-bottom">RAISED RELIEF POSTCARD</h3>
+		</div>
+		<div class="content border-bottom">
+			<p>4 x 6 inches</p>
+		</div>
+		<div class="content border-bottom">
+			<p>Years ago in Switzerland, I came across this raised relief postcard. I loved the style and I've always wanted to make one of Hong Kong.</p>
+			<div class="media-cont">
+				<img loading="lazy" src="img/switzerland.jpg" alt="">
+			</div>
+			<p>I've ran a bunch of failed experiements and contacted a bunch of shops... But I still don't have a way to actually make this! If you do, let me know!</p>
+		</div>
 	</div>
 </div>
 
 <div class="footer">
 	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
-</div>
-
 </div>
 
 <script type="importmap">
@@ -144,5 +116,4 @@
 <script type="module" src="lib/cloth.js"></script>
 <script type="module" src="lib/wallmap.js"></script>
 <script type="module" src="lib/postcard.js"></script>
-
 
