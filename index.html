@@ -440,26 +440,31 @@ p {
 }
 .pocket-trails {
   position: absolute;
-  top: 30px;
+  bottom: 80px;
   right: 30px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   z-index: 10;
 }
 .pocket-trails label {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 11px;
+  gap: 2px;
+  font-size: 8px;
+  line-height: 1;
   letter-spacing: 1px;
-  color: #fff;
+  color: #ddd;
   cursor: pointer;
   text-transform: uppercase;
+  text-shadow: 0 0 3px #000;
 }
 .pocket-trails label input[type="radio"] {
+  background-color: #333;
   accent-color: #111;
   cursor: pointer;
+  margin-top: 0;
+  width: 10px;
 }
 .footer {
   font-size: 9px;
