@@ -497,19 +497,29 @@ p {
 	cursor: pointer;
 }
 
-.about-cont {
+.pocket-trails {
+	position: absolute;
+	top: 30px;
+	right: 30px;
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
-	justify-content: center;
-	min-height: 100svh;
-	padding: 0 30px;
-	max-width: 375px;
-	margin: 0 auto;
+	gap: 8px;
+	z-index: 10;
 
-	h3 {
-		letter-spacing: 2px;
-		text-align: left;
+	label {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 11px;
+		letter-spacing: 1px;
+		color: #fff;
+		cursor: pointer;
+		text-transform: uppercase;
+
+		input[type="radio"] {
+			accent-color: #111;
+			cursor: pointer;
+		}
 	}
 }
 

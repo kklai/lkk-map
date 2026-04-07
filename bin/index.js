@@ -42,7 +42,7 @@ function compile() {
 	// 	}
 	// })
 	
-	var pages = ["index", "stories", "about"];
+	var pages = ["index", "stories"];
 
 	var c = child.exec("lessc src/style.less " + currentPath + "/build/style.css", (err, stdout, stderr) => {
 

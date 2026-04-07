@@ -1,9 +1,10 @@
 <div class="menu-cont">
 	<div class="menu-active">PROJECTS</div>
 	<a href="/stories/">STORIES</a>
-	<a href="/about/">ABOUT</a>
 </div>
 
+
+<!-- CLOTH MAP SECTION -->
 
 <div class="canvas-section" id="cloth-section">
 	<div class="canvas-inner" id="canvas-cloth"></div>
@@ -50,6 +51,7 @@
 	</div>
 </div>
 
+<!-- WALL MAP SECTION -->
 
 <div class="canvas-section" id="wallmap-section">
 	<div class="canvas-inner" id="canvas-wallmap"></div>
@@ -78,32 +80,13 @@
 </div>
 
 
+<!-- POSTCARD SECTION -->
+
 <div class="canvas-section" id="postcard-section">
 	<div class="canvas-inner" id="canvas-postcard"></div>
 	<div class="info-btn" data-more="postcard">i</div>
 	<div class="nav-arrow nav-arrow-up" data-next="wallmap-section">↑</div>
-	<div class="nav-arrow" data-next="squamish-section">↓</div>
-</div>
-
-<div class="canvas-section" id="squamish-section">
-	<div class="canvas-inner" id="canvas-squamish"></div>
-	<div class="info-btn" data-more="squamish">i</div>
-	<div class="nav-arrow nav-arrow-up" data-next="postcard-section">↑</div>
-</div>
-
-<div class="more more-squamish">
-	<div class="more-x">X</div>
-	<div class="inner-cont">
-		<div class="title">
-			<h3 class="border-bottom">004</h3>
-			<h3 class="en border-bottom">SQUAMISH BOULDER TOP 100</h3>
-		</div>
-		<div class="content border-bottom">
-			<p>50 x 70 cm</p>
-			<div class="break"></div>
-			<p>A collection of the most epic boulders in Squamish. On the Southern end, you have Majestic V6, an iconic deep water solo climb. With the two insets, you can see the details of the galore of climbs in the Grand Wall, Apron and the North Walls area. At the Northern end of the map, there is Paradise Valley, with climbs nestled deep in a forest trail.</p>
-		</div>
-	</div>
+	<div class="nav-arrow" data-next="pocket-section">↓</div>
 </div>
 
 
@@ -128,6 +111,63 @@
 	</div>
 </div>
 
+<!-- POCKET MAP SECTION -->
+
+<div class="canvas-section" id="pocket-section">
+	<div class="canvas-inner" id="paper"></div>
+	<div class="pocket-trails">
+		<label><input type="radio" name="trail" value="maclehose" checked> MacLehose Trail</label>
+		<label><input type="radio" name="trail" value="lantau"> Lantau Trail</label>
+		<label><input type="radio" name="trail" value="wilson"> Wilson Trail</label>
+		<label><input type="radio" name="trail" value="hong-kong"> Hong Kong Trail</label>
+	</div>
+	<div class="info-btn" data-more="pocket">i</div>
+	<div class="nav-arrow nav-arrow-up" data-next="postcard-section">↑</div>
+	<div class="nav-arrow" data-next="squamish-section">↓</div>
+</div>
+
+<div class="more more-pocket">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">004</h3>
+			<h3 class="cn border-bottom">口袋地圖</h3>
+			<h3 class="en border-bottom">POCKET MAP</h3>
+		</div>
+		<div class="content border-bottom">
+			<p>Open 22" x 8.5"</p>
+			<p>Folded 2.75" x 4.25"</p>
+			<p>When I was a kid and went on hiking trips, we navigated with a compass and a paper map. It's a different world today, but I still love a good paper trail map and I collect them everywhere I go. Here is my interpretation of paper trail maps for my favorite trails in the world.</p>
+		</div>
+	</div>
+</div>
+
+
+<!-- SQUAMISH SECTION -->
+
+<div class="canvas-section" id="squamish-section">
+	<div class="canvas-inner" id="canvas-squamish"></div>
+	<div class="info-btn" data-more="squamish">i</div>
+	<div class="nav-arrow nav-arrow-up" data-next="pocket-section">↑</div>
+</div>
+
+<div class="more more-squamish">
+	<div class="more-x">X</div>
+	<div class="inner-cont">
+		<div class="title">
+			<h3 class="border-bottom">005</h3>
+			<h3 class="en border-bottom">SQUAMISH BOULDER TOP 100</h3>
+		</div>
+		<div class="content border-bottom">
+			<p>50 x 70 cm</p>
+			<div class="break"></div>
+			<p>A collection of the most epic boulders in Squamish. On the Southern end, you have Majestic V6, an iconic deep water solo climb. With the two insets, you can see the details of the galore of climbs in the Grand Wall, Apron and the North Walls area. At the Northern end of the map, there is Paradise Valley, with climbs nestled deep in a forest trail.</p>
+		</div>
+	</div>
+</div>
+
+
+
 <div class="footer">
 	<p>© 2026 LKK MAP. ALL RIGHTS RESERVED.</p>
 </div>
@@ -144,5 +184,6 @@
 <script type="module" src="lib/cloth.js"></script>
 <script type="module" src="lib/wallmap.js"></script>
 <script type="module" src="lib/postcard.js"></script>
+<script type="module" src="lib/paper.js"></script>
 <script type="module" src="lib/squamish.js"></script>
 
