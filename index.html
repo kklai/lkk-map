@@ -289,7 +289,12 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+.more.open::before,
+.more.open::after {
+  content: '';
+  flex: 1;
+  min-height: 50px;
 }
 .more .more-x {
   position: fixed;
@@ -438,7 +443,7 @@ p {
   color: #fff;
   cursor: pointer;
 }
-.pocket-trails {
+.trail-selector {
   position: absolute;
   bottom: 80px;
   right: 30px;
@@ -447,7 +452,7 @@ p {
   gap: 4px;
   z-index: 10;
 }
-.pocket-trails label {
+.trail-selector label {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -459,7 +464,7 @@ p {
   text-transform: uppercase;
   text-shadow: 0 0 3px #000;
 }
-.pocket-trails label input[type="radio"] {
+.trail-selector label input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   /* important for Safari */
@@ -470,7 +475,7 @@ p {
   width: 10px;
   height: 10px;
 }
-.pocket-trails label input[type="radio"]:checked {
+.trail-selector label input[type="radio"]:checked {
   border-color: #999;
   box-shadow: inset 0 0 0 3px #eee;
   /* creates the inner dot */
@@ -493,6 +498,11 @@ p {
 
 <div class="canvas-section" id="cloth-section">
 	<div class="canvas-inner" id="canvas-cloth"></div>
+	<div class="trail-selector">
+		<label><input type="radio" name="cloth" value="four-trails" checked> Four Trails</label>
+		<label><input type="radio" name="cloth" value="kowloon-peak"> Kowloon Peak</label>
+		<label><input type="radio" name="cloth" value="cheung-tsui"> Cheung Tsui</label>
+	</div>
 	<div class="info-btn" data-more="cloth">i</div>
 	<div class="nav-arrow" data-next="wallmap-section">↓</div>
 </div>
@@ -600,7 +610,7 @@ p {
 
 <div class="canvas-section" id="pocket-section">
 	<div class="canvas-inner" id="paper"></div>
-	<div class="pocket-trails">
+	<div class="trail-selector">
 		<label><input type="radio" name="trail" value="maclehose" checked> MacLehose Trail</label>
 		<label><input type="radio" name="trail" value="lantau"> Lantau Trail</label>
 		<label><input type="radio" name="trail" value="wilson"> Wilson Trail</label>

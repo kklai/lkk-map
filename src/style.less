@@ -324,7 +324,13 @@ img {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+
+		&::before,
+		&::after {
+			content: '';
+			flex: 1;
+			min-height: 50px;
+		}
 	}
 
 	.more-x {
@@ -497,7 +503,7 @@ p {
 	cursor: pointer;
 }
 
-.pocket-trails {
+.trail-selector {
 	position: absolute;
 	bottom: 80px;
 	right: 30px;
