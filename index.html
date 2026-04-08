@@ -471,14 +471,19 @@ p {
   border: 2px solid #555;
   border-radius: 10px;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 1px;
+  margin-bottom: 1px;
   width: 10px;
   height: 10px;
 }
 .trail-selector label input[type="radio"]:checked {
-  border-color: #999;
-  box-shadow: inset 0 0 0 3px #eee;
+  border-color: #333;
+  box-shadow: inset 0 0 0 3px #000;
   /* creates the inner dot */
+}
+.trail-selector label span {
+  background: #000;
+  padding: 2px 4px;
 }
 .footer {
   font-size: 9px;
@@ -611,10 +616,10 @@ p {
 <div class="canvas-section" id="pocket-section">
 	<div class="canvas-inner" id="paper"></div>
 	<div class="trail-selector">
-		<label><input type="radio" name="trail" value="maclehose" checked> MacLehose Trail</label>
-		<label><input type="radio" name="trail" value="lantau"> Lantau Trail</label>
-		<label><input type="radio" name="trail" value="wilson"> Wilson Trail</label>
-		<label><input type="radio" name="trail" value="hong-kong"> Hong Kong Trail</label>
+		<label><input type="radio" name="trail" value="maclehose" checked> <span>MacLehose Trail</span></label>
+		<label><input type="radio" name="trail" value="lantau"> <span>Lantau Trail</span></label>
+		<label><input type="radio" name="trail" value="wilson"> <span>Wilson Trail</span></label>
+		<label><input type="radio" name="trail" value="hong-kong"> <span>Hong Kong Trail</span></label>
 	</div>
 	<div class="info-btn" data-more="pocket">i</div>
 	<div class="nav-arrow nav-arrow-up" data-next="postcard-section">↑</div>
